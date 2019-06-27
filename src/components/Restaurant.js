@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import React from "react";
 import { jsx } from "@emotion/core";
+import Rating from "./Rating";
 
-function Restaurant() {
+function Restaurant({ name = "Norky's", rating = 5 }) {
   const container = {
     position: "relative",
     backgroundColor: "white",
@@ -39,7 +40,14 @@ function Restaurant() {
 
   const spancss = {
     zIndex: 3,
-    fontSize: "5em",
+    fontSize: "3em",
+    color: "white",
+    textShadow: "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"
+  };
+
+  const ratingcss = {
+    zIndex: 3,
+    fontSize: "1.5em",
     color: "white",
     textShadow: "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"
   };
@@ -53,7 +61,10 @@ function Restaurant() {
           alt="Random Food"
         />
       </a>
-      <span css={spancss}>Norky's</span>
+      <span css={spancss}>{name}</span>
+      <div css={ratingcss}>
+        <Rating rating={rating} />
+      </div>
     </div>
   );
 }
