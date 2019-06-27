@@ -19,10 +19,17 @@ function Restaurant({ name, ratingValue, id }) {
     backgroundColor: "white",
     display: "flex",
     flexDirection: "column",
+<<<<<<< HEAD
     justifyContent: "space-between",
     alignItems: "center",
     width: "40vh",
     height: "120px",
+=======
+    justifyContent: "center",
+    alignItems: "center",
+    width: "50vh",
+    height: "150px",
+>>>>>>> Add span restaurant name to card
     boxSizing: "border - box",
     padding: 12,
     borderRadius: 8,
@@ -48,11 +55,17 @@ function Restaurant({ name, ratingValue, id }) {
     textShadow: "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"
   };
 
-  const imgCss = {
+  const imgcss = {
     position: "absolute",
     top: 0,
     left: 0,
     zIndex: 1
+  };
+
+  const spancss = {
+    zIndex: 3,
+    fontSize: "5em",
+    color: "white"
   };
 
   return (
