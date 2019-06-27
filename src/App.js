@@ -2,7 +2,7 @@
 import React from "react";
 import Login from "./components/Login";
 import { Global, jsx } from "@emotion/core";
-import Catalog from "./components/Catalog";
+import Catalog from "../src/views/Catalog";
 
 function App() {
   return (
@@ -11,7 +11,8 @@ function App() {
         height: "100vh"
       }}
     >
-      <Catalog /> //Reintegrar componente Login
+      <Catalog />
+      {/* reintegrar login  */}
     </div>
   );
 }

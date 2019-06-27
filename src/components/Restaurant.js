@@ -5,6 +5,7 @@ import { jsx } from "@emotion/core";
 function Restaurant() {
   const container = {
     position: "relative",
+    backgroundColor: "white",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space - between",
@@ -30,7 +31,7 @@ function Restaurant() {
 
   return (
     <div css={container}>
-      <p>dlk</p>
+      <p>Norkys</p>
     </div>
   );
 }

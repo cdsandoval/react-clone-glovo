@@ -5,7 +5,6 @@ import RestaurantHeader from "../components/RestaurantHeader";
 function Catalog() {
   return (
     <div>
-      <RestaurantHeader />
       <Restaurant />
     </div>
   );
