@@ -4,22 +4,10 @@ import { jsx } from "@emotion/core";
 
 import { Button, Card, Input } from "./ui";
 
-function Login({ onSubmit }) {
-  const [content, setContent] = React.useState("");
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    onSubmit(content);
-    setContent("");
-  }
-
-  function handleChange(event) {
-    setContent(event.target.value);
-  }
-
+function Login() {
   return (
     <Card css={{ maxWidth: "450px" }}>
-      <form onSubmit={handleSubmit}>
+      <form>
         <h1
           css={{
             fontSize: "2rem",
@@ -37,8 +25,6 @@ function Login({ onSubmit }) {
           <Input
             aria-label="Enter your company name"
             type="text"
-            value={content}
-            onChange={handleChange}
             placeholder="ACME Inc."
             autoFocus
           />
