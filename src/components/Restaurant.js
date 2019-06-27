@@ -2,7 +2,6 @@
 import React from "react";
 import { jsx } from "@emotion/core";
 import Rating from "./Rating";
-<<<<<<< HEAD
 import { Link } from "@reach/router";
 import { useListMenu, useRestId } from "../action-hook";
 
@@ -15,10 +14,6 @@ function Restaurant({ name, ratingValue, id }) {
     restId(id);
   }
 
-=======
-
-function Restaurant({ name = "Norky's", rating = 5 }) {
->>>>>>> Add font icon & order components
   const container = {
     position: "relative",
     backgroundColor: "white",
@@ -82,7 +77,6 @@ function Restaurant({ name = "Norky's", rating = 5 }) {
           src="http://lorempixel.com/500/250/food/?random"
           alt="Random Food"
         />
-<<<<<<< HEAD
 
         <span css={spanCss}>{name}</span>
 
@@ -90,13 +84,6 @@ function Restaurant({ name = "Norky's", rating = 5 }) {
           <Rating ratingNumber={ratingValue} />
         </span>
       </Link>
-=======
-      </a>
-      <span css={spancss}>{name}</span>
-      <div css={ratingcss}>
-        <Rating rating={rating} />
-      </div>
->>>>>>> Add font icon & order components
     </div>
   );
 }
