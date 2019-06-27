@@ -3,7 +3,7 @@ import React from "react";
 import { jsx } from "@emotion/core";
 import Rating from "./Rating";
 
-function Restaurant({ name = "Norky's", rating = 5 }) {
+function Restaurant({ name, ratingValue }) {
   const container = {
     position: "relative",
     backgroundColor: "white",
@@ -56,7 +56,7 @@ function Restaurant({ name = "Norky's", rating = 5 }) {
       <span css={spanCss}>{name}</span>
 
       <div css={ratingCss}>
-        <Rating rating={rating} />
+        <Rating ratingNumber={ratingValue} />
       </div>
     </div>
   );

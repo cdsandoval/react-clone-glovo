@@ -3,7 +3,7 @@ import React from "react";
 import { jsx } from "@emotion/core";
 import { Icon } from "semantic-ui-react";
 
-function Rating({ rating = 5 }) {
+function Rating({ ratingNumber }) {
   const container = { display: "flex" };
 
   const p = {
@@ -13,7 +13,7 @@ function Rating({ rating = 5 }) {
 
   return (
     <div css={container}>
-      <p css={p}>{rating}</p>
+      <p css={p}>{ratingNumber}</p>
       <Icon name="star outline" size="large" />
     </div>
   );

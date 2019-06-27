@@ -5,7 +5,7 @@ import { Icon } from "semantic-ui-react";
 import { Link } from "@reach/router";
 
 function RestaurantHeader() {
-  const container = {
+  const headerCss = {
     position: "absolute",
     display: "flex",
     flexDirection: "row",
@@ -13,7 +13,7 @@ function RestaurantHeader() {
     color: "#fff",
     justifyContent: "space-between",
     alignItems: "center",
-    zIndex: 3,
+
     listStyle: "none",
     background: "#000",
     padding: 30,
@@ -21,11 +21,12 @@ function RestaurantHeader() {
     fontWeight: "bold",
     left: "50%",
     marginTop: "30px",
-    transform: "translate(-50%, -40%)"
+    transform: "translate(-50%, -40%)",
+    zIndex: 4
   };
 
   return (
-    <div css={container}>
+    <div css={headerCss}>
       <Link to="/login">
         <Icon name="user circle outline" size="large" />
       </Link>
