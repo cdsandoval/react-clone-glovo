@@ -1,11 +1,15 @@
+/** @jsx jsx */
 import React from "react";
-import Restaurant from "../components/Restaurant";
+import { jsx } from "@emotion/core";
+
 import RestaurantHeader from "../components/RestaurantHeader";
+import RestaurantList from "../components/RestaurantList";
 
 function Catalog() {
   return (
     <div>
-      <Restaurant />
+      <RestaurantHeader />
+      <RestaurantList />
     </div>
   );
 }
