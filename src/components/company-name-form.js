@@ -4,7 +4,7 @@ import { jsx } from "@emotion/core";
 
 import { Button, Card, Input } from "./ui";
 
-function CompanyNameForm({ onSubmit }) {
+function Login({ onSubmit }) {
   const [content, setContent] = React.useState("");
 
   function handleSubmit(event) {
@@ -49,4 +49,4 @@ function CompanyNameForm({ onSubmit }) {
   );
 }
 
-export default CompanyNameForm;
+export default Login;
