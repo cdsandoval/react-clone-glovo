@@ -6,20 +6,20 @@ function Button({ styles, ...props }) {
     <button
       {...props}
       css={{
-        backgroundColor: "black",
-        border: "1px solid black",
+        backgroundColor: "rgba(0,168,133,1)",
+        border: "none",
         borderRadius: ".25rem",
         color: "white",
         cursor: "pointer",
-        fontSize: ".8rem",
+        fontSize: "1rem",
         padding: ".75rem 0",
         transition: "all 200ms ease",
         textAlign: "center",
         textTransform: "uppercase",
         width: "100%",
         "&:hover": {
-          backgroundColor: "white",
-          color: "black"
+          backgroundColor: "rgba(0,168,133,0.8)",
+          color: "white"
         },
         ...styles
       }}
@@ -32,7 +32,7 @@ function Card({ styles, ...props }) {
     <div
       {...props}
       css={{
-        background: "white",
+        background: "rgb(255,210,0)",
         borderRadius: ".5em",
         boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, .12)",
         boxSizing: "border-box",
@@ -49,17 +49,17 @@ function Input({ styles, ...props }) {
     <input
       {...props}
       css={{
-        background: "none",
+        background: "white",
         border: "1px solid #eaeaea",
         borderRadius: ".25rem",
+        textAlign: "center",
         boxSizing: "border-box",
         display: "block",
-        fontSize: "1rem",
+        fontSize: "1.5rem",
         padding: ".5rem",
         width: "100%",
         "&:focus": {
-          outline: "none",
-          borderColor: "#444444"
+          outline: "none"
         },
         ...styles
       }}
