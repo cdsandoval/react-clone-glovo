@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import React from "react";
 import { jsx } from "@emotion/core";
+import GlovoLogo from "../assets/glovo386.png";
 
 import { Button, Card, Input } from "./ui";
 
@@ -17,15 +18,7 @@ function Login() {
         }}
       >
         <form>
-          <h1
-            css={{
-              fontSize: "2rem",
-              fontWeight: "normal",
-              margin: "0"
-            }}
-          >
-            Glovo
-          </h1>
+          <img src={GlovoLogo} alt="Glovo Logo" />
 
           <div
             css={{
