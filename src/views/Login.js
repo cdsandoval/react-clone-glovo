@@ -3,7 +3,7 @@ import React from "react";
 import { jsx } from "@emotion/core";
 import GlovoLogo from "../assets/glovo386.png";
 
-import { Button, Card, Input } from "./ui";
+import { Button, Card, Input } from "../components/ui";
 
 function Login() {
   return (
