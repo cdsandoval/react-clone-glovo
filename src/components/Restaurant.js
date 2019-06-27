@@ -2,6 +2,7 @@
 import React from "react";
 import { jsx } from "@emotion/core";
 import Rating from "./Rating";
+<<<<<<< HEAD
 import { Link } from "@reach/router";
 import { useListMenu, useRestId } from "../action-hook";
 
@@ -14,6 +15,10 @@ function Restaurant({ name, ratingValue, id }) {
     restId(id);
   }
 
+=======
+
+function Restaurant({ name = "Norky's", rating = 5 }) {
+>>>>>>> Add font icon & order components
   const container = {
     position: "relative",
     backgroundColor: "white",
@@ -57,7 +62,14 @@ function Restaurant({ name, ratingValue, id }) {
 
   const spancss = {
     zIndex: 3,
-    fontSize: "5em",
+    fontSize: "3em",
+    color: "white",
+    textShadow: "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"
+  };
+
+  const ratingcss = {
+    zIndex: 3,
+    fontSize: "1.5em",
     color: "white",
     textShadow: "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"
   };
@@ -70,6 +82,7 @@ function Restaurant({ name, ratingValue, id }) {
           src="http://lorempixel.com/500/250/food/?random"
           alt="Random Food"
         />
+<<<<<<< HEAD
 
         <span css={spanCss}>{name}</span>
 
@@ -77,6 +90,13 @@ function Restaurant({ name, ratingValue, id }) {
           <Rating ratingNumber={ratingValue} />
         </span>
       </Link>
+=======
+      </a>
+      <span css={spancss}>{name}</span>
+      <div css={ratingcss}>
+        <Rating rating={rating} />
+      </div>
+>>>>>>> Add font icon & order components
     </div>
   );
 }
