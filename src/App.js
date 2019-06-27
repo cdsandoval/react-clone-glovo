@@ -1,9 +1,10 @@
 import React from "react";
+import Catalog from "./views/Catalog";
 
 function App() {
   return (
     <div>
-      <h1>React</h1>
+      <Catalog />
     </div>
   );
 }
