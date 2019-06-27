@@ -40,7 +40,8 @@ function Restaurant() {
   const spancss = {
     zIndex: 3,
     fontSize: "5em",
-    color: "white"
+    color: "white",
+    textShadow: "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"
   };
 
   return (
