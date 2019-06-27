@@ -29,9 +29,22 @@ function Restaurant() {
     }
   };
 
+  const imgCss = {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    zIndex: 1
+  };
+
   return (
     <div css={container}>
-      <p>Norkys</p>
+      <a href="/">
+        <img
+          css={imgCss}
+          src="http://lorempixel.com/400/200/food/?random"
+          alt="Random Food"
+        />
+      </a>
     </div>
   );
 }
