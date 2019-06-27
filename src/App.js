@@ -23,7 +23,11 @@ function App() {
         <Catalog path="/catalog" />
         <Redirect from="/" to="/login" noThrow />
         <ProductList path="/product-list" />
+<<<<<<< HEAD
         <Record path="/record" />
+=======
+        <Order path="/order" />
+>>>>>>> Add Order within Router
       </Router>
     </div>
   );
