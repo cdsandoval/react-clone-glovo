@@ -48,21 +48,22 @@ function Restaurant({ name, ratingValue, id }) {
     textShadow: "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"
   };
 
-  const imgcss = {
+  const imgCss = {
     position: "absolute",
     top: 0,
     left: 0,
-    zIndex: 1
+    zIndex: 1,
+    filter: "blur(2px)"
   };
 
-  const spancss = {
+  const spanCss = {
     zIndex: 3,
     fontSize: "3em",
     color: "white",
     textShadow: "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"
   };
 
-  const ratingcss = {
+  const ratingCss = {
     zIndex: 3,
     fontSize: "1.5em",
     color: "white",

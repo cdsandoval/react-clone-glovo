@@ -15,9 +15,12 @@
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
     "react-scripts": "3.0.1",
+<<<<<<< HEAD
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
+=======
+>>>>>>> Add header & Basic component
     "semantic-ui-react": "^0.87.2"
   },
   "scripts": {
