@@ -24,7 +24,7 @@ function Product({ cart }) {
 
   function handleIncrease() {
     if (product === null) {
-      Add(cart.id);
+      Add(cart);
     } else {
       increaseQuantity(cart.id);
     }
@@ -52,6 +52,7 @@ function Product({ cart }) {
         boxShadow: "3px 3px 7px 0px rgba(0,0,0,1)"
       }}
     >
+      <div />
       <div
         css={{
           display: "flex",
@@ -59,12 +60,6 @@ function Product({ cart }) {
           paddingTop: "10px"
         }}
       >
-        <a href="/">
-          <img
-            src="http://lorempixel.com/500/250/food/?random"
-            alt="Random Food"
-          />
-        </a>
         <span css={{ fontSize: "1.2em", fontWeight: "bold" }}>{cart.name}</span>
         <span css={{ fontSize: "1.1em" }}>S/. {cart.price}</span>
       </div>

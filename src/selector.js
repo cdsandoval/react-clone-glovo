@@ -8,4 +8,10 @@ function useProductfromCart(id) {
   }, shallowEqual);
 }
 
-export { useProductfromCart };
+function useSelectorCart() {
+  return useSelector(state => {
+    return state.cart;
+  }, shallowEqual);
+}
+
+export { useProductfromCart, useSelectorCart };

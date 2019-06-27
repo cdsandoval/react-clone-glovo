@@ -10,7 +10,7 @@ import {
 
 export function useAdd() {
   const dispatch = useDispatch();
-  return React.useCallback(id => dispatch(addCart(id)), [dispatch]);
+  return React.useCallback(product => dispatch(addCart(product)), [dispatch]);
 }
 
 export function useIncreaseQuantity() {
