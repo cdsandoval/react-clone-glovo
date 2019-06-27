@@ -1,16 +1,11 @@
 /** @jsx jsx */
 import React from "react";
-import Login from "./components/Login";
-import { Global, jsx } from "@emotion/core";
+import ProductList from "./views/productList";
 
 function App() {
   return (
-    <div
-      css={{
-        height: "100vh"
-      }}
-    >
-      <Login />
+    <div>
+      <ProductList />
     </div>
   );
 }
