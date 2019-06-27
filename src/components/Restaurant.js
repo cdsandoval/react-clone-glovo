@@ -8,7 +8,8 @@ function Restaurant() {
     backgroundColor: "white",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "space - between",
+    justifyContent: "center",
+    alignItems: "center",
     width: "50vh",
     height: "150px",
     boxSizing: "border - box",
@@ -29,22 +30,29 @@ function Restaurant() {
     }
   };
 
-  const imgCss = {
+  const imgcss = {
     position: "absolute",
     top: 0,
     left: 0,
     zIndex: 1
   };
 
+  const spancss = {
+    zIndex: 3,
+    fontSize: "5em",
+    color: "white"
+  };
+
   return (
     <div css={container}>
       <a href="/">
         <img
-          css={imgCss}
-          src="http://lorempixel.com/400/200/food/?random"
+          css={imgcss}
+          src="http://lorempixel.com/500/250/food/?random"
           alt="Random Food"
         />
       </a>
+      <span css={spancss}>Norky's</span>
     </div>
   );
 }
