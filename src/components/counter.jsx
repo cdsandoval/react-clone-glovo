@@ -12,6 +12,7 @@ function Counter({ handleDecrease, handleIncrease, quantity }) {
       }}
     >
       <button
+        aria-label="Increase Quantity"
         onClick={handleDecrease}
         css={{
           border: "2px solid black",
@@ -29,6 +30,7 @@ function Counter({ handleDecrease, handleIncrease, quantity }) {
         {quantity}
       </span>
       <button
+        aria-label="Decrease Quantity"
         onClick={handleIncrease}
         css={{
           border: "2px solid black",

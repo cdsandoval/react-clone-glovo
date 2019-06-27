@@ -19,6 +19,7 @@ exports[`Counter component 1`] = `
   background-color: red;
   padding: 5px 10px;
   color: white;
+  cursor: pointer;
 }
 
 .emotion-1 {
@@ -32,12 +33,14 @@ exports[`Counter component 1`] = `
   background-color: green;
   padding: 5px 10px;
   color: white;
+  cursos: pointer;
 }
 
 <div
     class="emotion-3"
   >
     <button
+      aria-label="Increase Quantity"
       class="emotion-0"
     >
       -
@@ -46,6 +49,7 @@ exports[`Counter component 1`] = `
       class="emotion-1"
     />
     <button
+      aria-label="Decrease Quantity"
       class="emotion-2"
     >
       +
