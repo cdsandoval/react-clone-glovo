@@ -11,10 +11,11 @@ function Button({ styles, ...props }) {
         borderRadius: ".25rem",
         color: "white",
         cursor: "pointer",
-        fontSize: "1rem",
+        fontSize: "1.2rem",
         padding: ".75rem 0",
         transition: "all 200ms ease",
         textAlign: "center",
+        fontWeight: "bold",
         textTransform: "uppercase",
         width: "100%",
         "&:hover": {
