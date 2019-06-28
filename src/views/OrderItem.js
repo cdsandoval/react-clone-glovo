@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
-import React from "react";
 
 function OrderItem({ name, price, description, quantity }) {
   return (
