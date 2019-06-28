@@ -26,17 +26,10 @@ function Restaurant({ name, ratingValue }) {
     top: 0,
     left: 0,
     zIndex: 1,
-    filter: "blur(2px)"
+    filter: "blur(1px)"
   };
 
   const spanCss = {
-    zIndex: 3,
-    fontSize: "2em",
-    color: "white",
-    textShadow: "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"
-  };
-
-  const ratingCss = {
     zIndex: 3,
     fontSize: "1.5em",
     color: "white",
@@ -55,9 +48,9 @@ function Restaurant({ name, ratingValue }) {
 
       <span css={spanCss}>{name}</span>
 
-      <div css={ratingCss}>
+      <span css={spanCss}>
         <Rating ratingNumber={ratingValue} />
-      </div>
+      </span>
     </div>
   );
 }

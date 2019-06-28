@@ -2,7 +2,7 @@
 import React from "react";
 import { jsx } from "@emotion/core";
 
-function History() {
+function History({ restaurantName, totalPaid }) {
   const container = {
     position: "relative",
     backgroundColor: "white",
@@ -25,12 +25,12 @@ function History() {
     top: 0,
     left: 0,
     zIndex: 1,
-    filter: "blur(2px)"
+    filter: "blur(1px)"
   };
 
   const spanCss = {
     zIndex: 3,
-    fontSize: "2em",
+    fontSize: "1.5em",
     color: "white",
     textShadow: "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"
   };
@@ -45,7 +45,9 @@ function History() {
         />
       </a>
 
-      <span css={spanCss} />
+      <span css={spanCss}>{restaurantName}</span>
+
+      <span css={spanCss}>{totalPaid}</span>
     </div>
   );
 }
