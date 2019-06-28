@@ -14,14 +14,8 @@ function Order({
   console.log(cartProducts);
   return (
     <div>
-      {Object.values(cartProducts).map(value => {
-        return (
-          <OrderItem
-            name={value.name}
-            price={value.price}
-            description={value.description}
-          />
-        );
+      {Object.values(cartProducts).map(product => {
+        return <OrderItem {...product} />;
       })}
     </div>
   );

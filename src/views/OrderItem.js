@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core";
 import React from "react";
 
-function OrderItem({ name, price, description }) {
+function OrderItem({ name, price, description, quantity }) {
   return (
     <div
       css={{
@@ -24,6 +24,7 @@ function OrderItem({ name, price, description }) {
       >
         <span css={{ fontSize: "1.2em", fontWeight: "bold" }}>{name}</span>
         <span css={{ fontSize: "1.1em" }}>S/.{price}</span>
+        <span css={{ fontSize: "1.1em" }}>Quantity:{quantity}</span>
       </div>
 
       <p>{description}</p>
