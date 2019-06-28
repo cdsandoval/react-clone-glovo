@@ -5,11 +5,8 @@ import { Global, jsx } from "@emotion/core";
 import Catalog from "../src/views/Catalog";
 import { Router, Redirect } from "@reach/router";
 import Login from "./views/Login";
-<<<<<<< HEAD
 import Record from "./views/Record";
-=======
 import Order from "./views/Order";
->>>>>>> Testing Product Component
 
 function App() {
   return (
@@ -23,11 +20,8 @@ function App() {
         <Catalog path="/catalog" />
         <Redirect from="/" to="/login" noThrow />
         <ProductList path="/product-list" />
-<<<<<<< HEAD
         <Record path="/record" />
-=======
         <Order path="/order" />
->>>>>>> Add Order within Router
       </Router>
     </div>
   );
