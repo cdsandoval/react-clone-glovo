@@ -5,6 +5,7 @@ import { Global, jsx } from "@emotion/core";
 import Catalog from "../src/views/Catalog";
 import { Router, Redirect } from "@reach/router";
 import Login from "./views/Login";
+import Record from "./views/Record";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Catalog path="/catalog" />
         <Redirect from="/" to="/login" noThrow />
         <ProductList path="/product-list" />
+        <Record path="/record" />
       </Router>
     </div>
   );

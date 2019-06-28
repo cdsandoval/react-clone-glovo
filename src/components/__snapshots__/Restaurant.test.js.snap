@@ -2,47 +2,87 @@
 
 exports[`Login Form on Submit 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1ek8wr-Restaurant"
+  .emotion-5 {
+  position: relative;
+  background-color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 40vh;
+  height: 120px;
+  box-sizing: border - box;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0px 5px 9px rgba(0,0,0,0.2);
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.emotion-0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
+}
+
+.emotion-1 {
+  z-index: 3;
+  font-size: 1.5em;
+  color: white;
+  text-shadow: -0.5px 0 black,0 0.5px black,0.5px 0 black,0 -0.5px black;
+}
+
+.emotion-2 {
+  font-size: 15px;
+  margin: 3.5px;
+}
+
+<div
+    class="emotion-5"
   >
     <a
       href="/"
     >
       <img
         alt="Random Food"
-        class="css-1jebt3d-Restaurant"
+        class="emotion-0"
         src="http://lorempixel.com/500/250/food/?random"
       />
     </a>
     <span
-      class="css-78psn-Restaurant"
-    >
-      Norky's
-    </span>
-    <div
-      class="css-12cm46i-Restaurant"
+      class="emotion-1"
+    />
+    <span
+      class="emotion-1"
     >
       <div>
-        <p>
-          5
-        </p>
-        <svg
-          aria-hidden="true"
-          class="svg-inline--fa fa-star fa-w-18 "
-          data-icon="star"
-          data-prefix="fas"
-          focusable="false"
-          role="img"
-          viewBox="0 0 576 512"
-          xmlns="http://www.w3.org/2000/svg"
+        <span
+          class="emotion-2"
+        />
+        <span
+          class="emotion-2"
         >
-          <path
-            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
-            fill="currentColor"
+          <i
+            aria-hidden="true"
+            class="star outline small icon"
           />
-        </svg>
+        </span>
       </div>
-    </div>
+    </span>
   </div>
 </DocumentFragment>
 `;

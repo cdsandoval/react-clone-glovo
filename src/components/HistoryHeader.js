@@ -4,7 +4,7 @@ import { jsx } from "@emotion/core";
 import { Icon } from "semantic-ui-react";
 import { Link } from "@reach/router";
 
-function RestaurantHeader() {
+function HistoryHeader() {
   const headerCss = {
     display: "flex",
     flexDirection: "row",
@@ -27,13 +27,12 @@ function RestaurantHeader() {
   return (
     <div css={headerCss}>
       <Link to="/login" style={{ color: "white" }}>
-        <Icon name="user circle outline" size="large" />
+        <Icon name="arrow alternate circle left outline" size="large" />
       </Link>
-      <h1 css={h1}>Catalog</h1>
-
+      <h1 css={h1}>Record</h1>
       <Icon name="sign out" size="large" />
     </div>
   );
 }
 
-export default RestaurantHeader;
+export default HistoryHeader;

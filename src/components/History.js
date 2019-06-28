@@ -1,9 +1,8 @@
 /** @jsx jsx */
 import React from "react";
 import { jsx } from "@emotion/core";
-import Rating from "./Rating";
 
-function Restaurant({ name, ratingValue }) {
+function History({ restaurantName, totalPaid }) {
   const container = {
     position: "relative",
     backgroundColor: "white",
@@ -36,23 +35,29 @@ function Restaurant({ name, ratingValue }) {
     textShadow: "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"
   };
 
+  const record = {
+    zIndex: 3,
+    fontSize: 15,
+    margin: "3.5px",
+    color: "white",
+    textShadow: "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"
+  };
+
   return (
     <div css={container}>
       <a href="/">
         <img
           css={imgCss}
-          src="http://lorempixel.com/500/250/food/?random"
-          alt="Random Food"
+          src="http://lorempixel.com/500/250/city/?random"
+          alt="Random Restaurant"
         />
       </a>
 
-      <span css={spanCss}>{name}</span>
+      <span css={spanCss}>{restaurantName}</span>
 
-      <span css={spanCss}>
-        <Rating ratingNumber={ratingValue} />
-      </span>
+      <span css={record}> Total: $ {totalPaid}</span>
     </div>
   );
 }
 
-export default Restaurant;
+export default History;
