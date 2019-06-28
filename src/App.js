@@ -5,7 +5,11 @@ import { Global, jsx } from "@emotion/core";
 import Catalog from "../src/views/Catalog";
 import { Router, Redirect } from "@reach/router";
 import Login from "./views/Login";
+<<<<<<< HEAD
 import Record from "./views/Record";
+=======
+import Order from "./views/Order";
+>>>>>>> Testing Product Component
 
 function App() {
   return (
