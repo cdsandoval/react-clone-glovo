@@ -38,7 +38,7 @@ function Restaurant({ name, ratingValue }) {
 
   return (
     <div css={container}>
-      <a href="/">
+      <a href="/product-list">
         <img
           css={imgCss}
           src="http://lorempixel.com/500/250/food/?random"

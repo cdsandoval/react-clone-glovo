@@ -46,7 +46,7 @@ function addCart(product) {
 
 function login(user) {
   return async dispatch => {
-    const response = await fetch(API_LOGIN_URL, {
+    const response = await fetch("http://localhost:3000/api/login", {
       method: "POST",
       credentials: "include",
       body: JSON.stringify(user),
