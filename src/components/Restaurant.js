@@ -12,13 +12,13 @@ function Restaurant({ name, ratingValue }) {
     justifyContent: "space-between",
     alignItems: "center",
     width: "50vh",
-    height: "150px",
+    height: "120px",
     boxSizing: "border - box",
     padding: 12,
     borderRadius: 8,
     boxShadow: "0px 5px 9px rgba(0, 0, 0, 0.2)",
     overflow: "hidden",
-    marginBottom: "15px"
+    marginBottom: "25px"
   };
 
   const imgCss = {
@@ -31,7 +31,7 @@ function Restaurant({ name, ratingValue }) {
 
   const spanCss = {
     zIndex: 3,
-    fontSize: "3em",
+    fontSize: "2em",
     color: "white",
     textShadow: "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"
   };
