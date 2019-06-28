@@ -1,10 +1,32 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import GlovoLogo from "../assets/glovo386.png";
-
+import { Redirect } from "@reach/router";
 import { Button, Card, Input } from "../components/ui";
+import { useUser } from "../selector";
+import { useLogin } from "../action-hook";
 
 function Login() {
+  const login = useLogin();
+  const [email, setEmail] = React.useState("josh@delivery.pe");
+  const [password, setPassword] = React.useState("123456");
+  const currentUser = useUser();
+
+  if (currentUser) return <Redirect to="/product-list" noThrow />;
+
+  function changeEmail(e) {
+    setEmail(e.target.value);
+  }
+
+  function changePassword(e) {
+    setPassword(e.target.value);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    login({ email, password });
+  }
+
   return (
     <div>
       <Card
@@ -16,7 +38,7 @@ function Login() {
           transform: "translate(-50%, -50%)"
         }}
       >
-        <form>
+        <form onSubmit={handleSubmit}>
           <img src={GlovoLogo} alt="Glovo Logo" />
 
           <div
@@ -29,6 +51,8 @@ function Login() {
               type="email"
               placeholder="Enter your e-mail"
               autoFocus
+              value={email}
+              onChange={changeEmail}
             />
           </div>
 
@@ -42,6 +66,8 @@ function Login() {
               type="password"
               placeholder="Enter your password"
               autoFocus
+              value={password}
+              onChange={changePassword}
             />
           </div>
 

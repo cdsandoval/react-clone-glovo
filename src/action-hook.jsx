@@ -5,8 +5,20 @@ import {
   decreaseQuantity,
   reset,
   addCart,
-  removeCart
+  removeCart,
+  login,
+  logout
 } from "./action";
+
+export function useLogin() {
+  const dispatch = useDispatch();
+  return React.useCallback(user => dispatch(login(user)), [dispatch]);
+}
+
+export function useLogout() {
+  const dispatch = useDispatch();
+  return React.useCallback(() => dispatch(logout()), [dispatch]);
+}
 
 export function useAdd() {
   const dispatch = useDispatch();
