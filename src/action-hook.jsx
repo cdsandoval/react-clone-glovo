@@ -8,7 +8,8 @@ import {
   removeCart,
   login,
   logout,
-  listRestaurants
+  listRestaurants,
+  listMenu
 } from "./action";
 
 export function useLogin() {
