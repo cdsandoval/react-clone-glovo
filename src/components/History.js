@@ -55,7 +55,7 @@ function History({ restaurantName, totalPaid }) {
 
       <span css={spanCss}>{restaurantName}</span>
 
-      <span css={record}> Record: $ {totalPaid}</span>
+      <span css={record}> Total: $ {totalPaid}</span>
     </div>
   );
 }

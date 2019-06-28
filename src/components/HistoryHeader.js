@@ -26,7 +26,7 @@ function HistoryHeader() {
 
   return (
     <div css={headerCss}>
-      <Link to="/login">
+      <Link to="/login" style={{ color: "white" }}>
         <Icon name="arrow alternate circle left outline" size="large" />
       </Link>
       <h1 css={h1}>Record</h1>
