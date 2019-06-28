@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react";
 import { jsx } from "@emotion/core";
 import { Card } from "../components/ui";
 import { useSelectorTotal } from "../selector";
