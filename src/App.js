@@ -2,7 +2,8 @@
 import React from "react";
 import ProductList from "./views/productList";
 import { Global, jsx } from "@emotion/core";
-import { Router, Link, Redirect } from "@reach/router";
+import Catalog from "../src/views/Catalog";
+import { Router, Redirect } from "@reach/router";
 import Login from "./views/Login";
 
 function App() {
@@ -13,8 +14,9 @@ function App() {
       }}
     >
       <Router>
-        <Redirect from="/" to="/login" noThrow />
         <Login path="/login" />
+        <Catalog path="/catalog" />
+        <Redirect from="/" to="/login" noThrow />
         <ProductList path="/product-list" />
       </Router>
     </div>
