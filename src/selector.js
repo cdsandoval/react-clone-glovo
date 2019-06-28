@@ -14,4 +14,12 @@ function useSelectorCart() {
   }, shallowEqual);
 }
 
-export { useProductfromCart, useSelectorCart };
+function useSelectorTotal() {
+  return useSelector(state => {
+    return Object.values(state.cart).reduce((acc, item) => {
+      return acc + item.price * item.quantity;
+    }, 0);
+  }, shallowEqual);
+}
+
+export { useProductfromCart, useSelectorCart, useSelectorTotal };

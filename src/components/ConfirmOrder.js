@@ -11,7 +11,7 @@ function ConfirmOrder() {
           backgroundColor: "rgba(255,210,0,1)",
           color: "white",
           "&:hover": {
-            backgroundColor: "rgba(255,210,0,0.8)",
+            backgroundColor: "rgba(255,210,0,0.9)",
             color: "white"
           }
         }}

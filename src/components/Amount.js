@@ -2,21 +2,17 @@
 import React from "react";
 import { jsx } from "@emotion/core";
 import { Card } from "../components/ui";
+import { useSelectorTotal } from "../selector";
 
 function Amount() {
+  const amount = useSelectorTotal();
   return (
-    <div>
-      <Card
-        css={{
-          maxWidth: "450px",
-          position: "absolute",
-          left: "50%",
-          top: "50%",
-          transform: "translate(-50%, -50%)"
-        }}
-      >
-        Total amount: S/. 150.00
-      </Card>
+    <div
+      css={{
+        marginBottom: "1.5em"
+      }}
+    >
+      <Card>Total amount: S/. {amount}</Card>
     </div>
   );
 }
