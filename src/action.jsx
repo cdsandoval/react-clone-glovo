@@ -29,11 +29,12 @@ function reset() {
   return { type: "RESET" };
 }
 
-function addCart(id) {
+function addCart(product) {
+  console.log(product);
   return {
     type: "ADD_PRODUCT",
     payload: {
-      id,
+      ...product,
       quantity: 1
     }
   };

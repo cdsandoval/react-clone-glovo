@@ -24,7 +24,7 @@ function Product({ cart }) {
 
   function handleIncrease() {
     if (product === null) {
-      Add(cart.id);
+      Add(cart);
     } else {
       increaseQuantity(cart.id);
     }

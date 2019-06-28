@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Login from "../views/Login";
-test("Login Form on Submit", () => {
-  const { asFragment } = render(<Login />);
+import PickUp from "./PickUp";
+test("PickUp Component", () => {
+  const { asFragment } = render(<PickUp />);
   expect(asFragment()).toMatchSnapshot();
 });

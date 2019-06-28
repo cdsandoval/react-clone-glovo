@@ -6,6 +6,7 @@ import Catalog from "../src/views/Catalog";
 import { Router, Redirect } from "@reach/router";
 import Login from "./views/Login";
 import Record from "./views/Record";
+import Order from "./views/Order";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Redirect from="/" to="/login" noThrow />
         <ProductList path="/product-list" />
         <Record path="/record" />
+        <Order path="/order" />
       </Router>
     </div>
   );
