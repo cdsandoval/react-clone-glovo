@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Form on Submit 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  font-size: 15px;
+  margin: 3.5px;
+}
+
+<div>
+    <span
+      class="emotion-0"
+    />
+    <span
+      class="emotion-0"
+    >
+      <i
+        aria-hidden="true"
+        class="star outline small icon"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;
