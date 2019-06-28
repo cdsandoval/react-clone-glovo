@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import React from "react";
 import { jsx } from "@emotion/core";
-import Product from "../components/product";
 import { useSelectorCart } from "../selector";
 import OrderItem from "./OrderItem";
 import ConfirmOrder from "../components/ConfirmOrder";
+import PickUp from "../components/PickUp";
 
 function Order({
   description = "descripcion",
@@ -19,6 +19,7 @@ function Order({
       {Object.values(cartProducts).map(product => {
         return <OrderItem {...product} />;
       })}
+      <PickUp />
       <ConfirmOrder />
     </div>
   );
