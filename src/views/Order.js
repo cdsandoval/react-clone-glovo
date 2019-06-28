@@ -5,6 +5,7 @@ import { useSelectorCart } from "../selector";
 import OrderItem from "./OrderItem";
 import ConfirmOrder from "../components/ConfirmOrder";
 import PickUp from "../components/PickUp";
+import Amount from "../components/Amount";
 
 function Order({
   description = "descripcion",
@@ -20,6 +21,7 @@ function Order({
         return <OrderItem {...product} />;
       })}
       <PickUp />
+      <Amount />
       <ConfirmOrder />
     </div>
   );
