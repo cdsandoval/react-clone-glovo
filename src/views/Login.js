@@ -1,18 +1,23 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import GlovoLogo from "../assets/glovo386.png";
-import { Redirect } from "@reach/router";
+import { navigate } from "@reach/router";
 import { Button, Card, Input } from "../components/ui";
 import { useUser } from "../selector";
 import { useLogin } from "../action-hook";
+import React from "react";
 
 function Login() {
   const login = useLogin();
   const [email, setEmail] = React.useState("josh@delivery.pe");
   const [password, setPassword] = React.useState("123456");
-  const currentUser = useUser();
+  const user = useUser();
 
-  if (currentUser) return <Redirect to="/product-list" noThrow />;
+  React.useEffect(() => {
+    if (user.name) {
+      navigate("/");
+    }
+  }, [user]);
 
   function changeEmail(e) {
     setEmail(e.target.value);

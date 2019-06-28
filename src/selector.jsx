@@ -8,10 +8,28 @@ function useProductfromCart(id) {
   }, shallowEqual);
 }
 
+function useSelectorCart() {
+  return useSelector(state => {
+    return state.cart;
+  }, shallowEqual);
+}
+
+function useSelectorTotal() {
+  return useSelector(state => {
+    return Object.values(state.cart).reduce((acc, item) => {
+      return acc + item.price * item.quantity;
+    }, 0);
+  }, shallowEqual);
+}
+
+function useRestaurants() {
+  return useSelector(state => Object.values(state.restaurants), shallowEqual);
+}
+
 function useUser() {
   return useSelector(state => {
     if (state.user) {
-      return Object.values(state.user);
+      return state.user.currentUser;
     } else {
       return null;
     }
@@ -36,4 +54,12 @@ function useError() {
   }, shallowEqual);
 }
 
-export { useProductfromCart, useUser, useLoading, useError };
+export {
+  useProductfromCart,
+  useUser,
+  useLoading,
+  useError,
+  useRestaurants,
+  useSelectorCart,
+  useSelectorTotal
+};

@@ -7,7 +7,8 @@ import {
   addCart,
   removeCart,
   login,
-  logout
+  logout,
+  listRestaurants
 } from "./action";
 
 export function useLogin() {
@@ -43,4 +44,9 @@ export function useReset() {
 export function useRemoveCart() {
   const dispatch = useDispatch();
   return React.useCallback(id => dispatch(removeCart(id)), [dispatch]);
+}
+
+export function useListRestaurants() {
+  const dispatch = useDispatch();
+  return React.useCallback(() => dispatch(listRestaurants()), [dispatch]);
 }

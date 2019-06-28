@@ -3,8 +3,10 @@ import React from "react";
 import { jsx } from "@emotion/core";
 import { Icon } from "semantic-ui-react";
 import { Link } from "@reach/router";
+import { useLogout } from "../action-hook";
 
 function RestaurantHeader() {
+  const logout = useLogout();
   const headerCss = {
     display: "flex",
     flexDirection: "row",
@@ -31,7 +33,13 @@ function RestaurantHeader() {
       </Link>
       <h1 css={h1}>Catalog</h1>
 
-      <Icon name="sign out" size="large" />
+      <br />
+
+      <span>
+        <Link to="/login" onClick={logout}>
+          <Icon fitted name="sign out" size="large" />
+        </Link>
+      </span>
     </div>
   );
 }
