@@ -6,7 +6,6 @@ import { Link } from "@reach/router";
 
 function RestaurantHeader() {
   const headerCss = {
-    position: "absolute",
     display: "flex",
     flexDirection: "row",
     fontSize: 20,
@@ -15,13 +14,11 @@ function RestaurantHeader() {
     alignItems: "center",
 
     listStyle: "none",
-    background: "#000",
+    background: "rgba(245, 230, 83, 1)",
     padding: 30,
     width: "100%",
     fontWeight: "bold",
-    left: "50%",
-    marginTop: "30px",
-    transform: "translate(-50%, -40%)",
+    marginBottom: "30px",
     zIndex: 4
   };
 
