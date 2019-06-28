@@ -2,7 +2,6 @@
 import React from "react";
 import { jsx } from "@emotion/core";
 
-<<<<<<< HEAD
 function History({ restaurantName, totalPaid }) {
   const container = {
     position: "relative",
@@ -59,12 +58,6 @@ function History({ restaurantName, totalPaid }) {
       <span css={record}> Total: $ {totalPaid}</span>
     </div>
   );
-=======
-import HistoryHeader from "../components/HistoryHeader";
-
-function History() {
-  return <HistoryHeader />;
->>>>>>> Add styles to headers
 }
 
 export default History;

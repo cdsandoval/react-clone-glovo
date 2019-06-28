@@ -26,17 +26,10 @@ function HistoryHeader() {
 
   return (
     <div css={headerCss}>
-<<<<<<< HEAD
       <Link to="/" style={{ color: "white" }}>
         <Icon name="arrow alternate circle left outline" size="large" />
       </Link>
       <h1 css={h1}>Record</h1>
-=======
-      <Link to="/login">
-        <Icon name="arrow alternate circle left outline" size="large" />
-      </Link>
-      <h1 css={h1}>History</h1>
->>>>>>> Add styles to headers
       <Icon name="sign out" size="large" />
     </div>
   );

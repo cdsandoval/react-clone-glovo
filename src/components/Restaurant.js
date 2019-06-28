@@ -58,13 +58,6 @@ function Restaurant({ name, ratingValue, id }) {
 
   const spanCss = {
     zIndex: 3,
-    fontSize: "2em",
-    color: "white",
-    textShadow: "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"
-  };
-
-  const ratingCss = {
-    zIndex: 3,
     fontSize: "1.5em",
     color: "white",
     textShadow: "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"
