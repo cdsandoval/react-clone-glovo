@@ -2,7 +2,7 @@
 
 exports[`Login Form on Submit 1`] = `
 <DocumentFragment>
-  .emotion-4 {
+  .emotion-5 {
   position: relative;
   background-color: white;
   display: -webkit-box;
@@ -20,7 +20,7 @@ exports[`Login Form on Submit 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 50vh;
+  width: 40vh;
   height: 120px;
   box-sizing: border - box;
   padding: 12px;
@@ -41,27 +41,18 @@ exports[`Login Form on Submit 1`] = `
 
 .emotion-1 {
   z-index: 3;
-  font-size: 2em;
+  font-size: 1.5em;
   color: white;
   text-shadow: -0.5px 0 black,0 0.5px black,0.5px 0 black,0 -0.5px black;
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: flex-end;
-  -ms-flex-direction: flex-end;
-  flex-direction: flex-end;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  font-size: 15px;
+  margin: 3.5px;
 }
 
 <div
-    class="emotion-4"
+    class="emotion-5"
   >
     <a
       href="/"
@@ -78,16 +69,18 @@ exports[`Login Form on Submit 1`] = `
     <span
       class="emotion-1"
     >
-      <div
-        class="emotion-2"
-      >
-        <p />
-        <div>
+      <div>
+        <span
+          class="emotion-2"
+        />
+        <span
+          class="emotion-2"
+        >
           <i
             aria-hidden="true"
             class="star outline small icon"
           />
-        </div>
+        </span>
       </div>
     </span>
   </div>

@@ -11,7 +11,7 @@ function Restaurant({ name, ratingValue }) {
     flexDirection: "column",
     justifyContent: "space-between",
     alignItems: "center",
-    width: "50vh",
+    width: "40vh",
     height: "120px",
     boxSizing: "border - box",
     padding: 12,
