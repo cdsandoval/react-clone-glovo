@@ -7,6 +7,7 @@ import { Router } from "@reach/router";
 import Login from "./views/Login";
 import Record from "./views/Record";
 import Order from "./views/Order";
+import Location from "./views/Location";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <ProductList path="/product-list" />
         <Record path="/record" />
         <Order path="/order" />
+        <Location path="/location" />
       </Router>
     </div>
   );
