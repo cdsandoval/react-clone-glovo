@@ -17,7 +17,7 @@ function HistoryHeader() {
     width: "100%",
     fontWeight: "bold",
     marginBottom: "30px",
-    zIndex: 4
+    zIndex: 2
   };
 
   const h1 = {
