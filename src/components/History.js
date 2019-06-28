@@ -35,6 +35,14 @@ function History({ restaurantName, totalPaid }) {
     textShadow: "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"
   };
 
+  const record = {
+    zIndex: 3,
+    fontSize: 15,
+    margin: "3.5px",
+    color: "white",
+    textShadow: "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"
+  };
+
   return (
     <div css={container}>
       <a href="/">
@@ -47,7 +55,7 @@ function History({ restaurantName, totalPaid }) {
 
       <span css={spanCss}>{restaurantName}</span>
 
-      <span css={spanCss}>{totalPaid}</span>
+      <span css={record}> Record: $ {totalPaid}</span>
     </div>
   );
 }
