@@ -5,8 +5,21 @@ import {
   decreaseQuantity,
   reset,
   addCart,
-  removeCart
+  removeCart,
+  login,
+  logout,
+  listRestaurants
 } from "./action";
+
+export function useLogin() {
+  const dispatch = useDispatch();
+  return React.useCallback(user => dispatch(login(user)), [dispatch]);
+}
+
+export function useLogout() {
+  const dispatch = useDispatch();
+  return React.useCallback(() => dispatch(logout()), [dispatch]);
+}
 
 export function useAdd() {
   const dispatch = useDispatch();
@@ -31,4 +44,9 @@ export function useReset() {
 export function useRemoveCart() {
   const dispatch = useDispatch();
   return React.useCallback(id => dispatch(removeCart(id)), [dispatch]);
+}
+
+export function useListRestaurants() {
+  const dispatch = useDispatch();
+  return React.useCallback(() => dispatch(listRestaurants()), [dispatch]);
 }

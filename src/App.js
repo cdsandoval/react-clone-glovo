@@ -3,7 +3,7 @@ import React from "react";
 import ProductList from "./views/productList";
 import { Global, jsx } from "@emotion/core";
 import Catalog from "../src/views/Catalog";
-import { Router, Redirect } from "@reach/router";
+import { Router } from "@reach/router";
 import Login from "./views/Login";
 import Record from "./views/Record";
 import Order from "./views/Order";
@@ -17,8 +17,7 @@ function App() {
     >
       <Router>
         <Login path="/login" />
-        <Catalog path="/catalog" />
-        <Redirect from="/" to="/login" noThrow />
+        <Catalog path="/" />
         <ProductList path="/product-list" />
         <Record path="/record" />
         <Order path="/order" />
