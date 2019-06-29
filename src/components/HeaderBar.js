@@ -33,6 +33,7 @@ function HeaderBar({ routePath, titleBar }) {
   };
 
   const buttoncss = {
+    background: "transparent",
     backgroundRepeat: "no-repeat",
     border: "none",
     cursor: "pointer",
@@ -57,14 +58,15 @@ function HeaderBar({ routePath, titleBar }) {
     <div css={headerCss}>
       {titleBar === "Product List" ? (
         <button css={buttoncss} onClick={() => setShowDialog(true)}>
-          {/* <Icon name="arrow alternate circle left outline" size="large" /> */}
-          <Dialog isOpen={showDialog} onDismiss={() => setShowDialog(true)}>
-            <p>¿Estás seguro? Podrías perder tus productos</p>
-            <button onClick={() => setShowDialog(false)}>Sí</button>
-            <button onClick={() => setShowDialog(false)}>
-              No por favorcito, deseo quedarme
-            </button>
-          </Dialog>
+          <Icon name="arrow alternate circle left outline" size="large">
+            <Dialog isOpen={showDialog} onDismiss={() => setShowDialog(true)}>
+              <p>¿Estás seguro? Podrías perder tus productos</p>
+              <button onClick={() => setShowDialog(false)}>Sí</button>
+              <button onClick={() => setShowDialog(false)}>
+                No, deseo quedarme
+              </button>
+            </Dialog>
+          </Icon>
         </button>
       ) : (
         <Link to={routePath} style={{ color: "white" }}>
