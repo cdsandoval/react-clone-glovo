@@ -8,7 +8,7 @@ function Modal() {
   const [showDialog, setShowDialog] = useState(false);
 
   return (
-    <div>
+    <div css={{ zIndex: 100 }}>
       <button onClick={() => setShowDialog(true)}>Show Dialog</button>
 
       <Dialog isOpen={showDialog} onDismiss={() => setShowDialog(true)}>

@@ -1,8 +1,11 @@
 /** @jsx jsx */
-import React from "react";
+import React, { useState } from "react";
 import { jsx } from "@emotion/core";
 import { Icon } from "semantic-ui-react";
 import { Link } from "@reach/router";
+import { Route, Redirect } from "@reach/router";
+import { useReset } from "../action-hook";
+import Modal from "../components/Modal";
 
 function HeaderBar({ routePath, titleBar }) {
   const headerCss = {
@@ -33,10 +36,23 @@ function HeaderBar({ routePath, titleBar }) {
     color: "white"
   };
 
+  const reset = useReset();
+
+  function handleYes() {
+    Redirect("/");
+    reset();
+  }
+
+  const [show, setShow] = useState(false);
+
+  function handleModal() {
+    setShow(true);
+  }
+
   return (
     <div css={headerCss}>
       {titleBar === "Product List" ? (
-        <button css={buttoncss}>
+        <button css={buttoncss} onClick={handleModal}>
           <Icon name="arrow alternate circle left outline" size="large" />
         </button>
       ) : (
@@ -44,7 +60,7 @@ function HeaderBar({ routePath, titleBar }) {
           <Icon name="arrow alternate circle left outline" size="large" />
         </Link>
       )}
-
+      {show ? <Modal /> : null}
       {/* <Link to={routePath} style={{ color: "white" }}>
         <Icon name="arrow alternate circle left outline" size="large" />
       </Link> */}
