@@ -14,6 +14,7 @@ const body = {
 function RestaurantList() {
   const restaurants = useListRestaurants();
   const listRestaurants = useRestaurants();
+  console.log(restaurants);
 
   React.useEffect(() => {
     restaurants();

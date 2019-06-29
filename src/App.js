@@ -21,8 +21,8 @@ function App() {
         <Catalog path="/" />
         <ProductList path="/product-list" />
         <Record path="/record" />
+        <Location path="/location/:id" />
         <Order path="/order" />
-        <Location path="/location" />
       </Router>
     </div>
   );

@@ -62,6 +62,15 @@ function useOrder() {
   }, shallowEqual);
 }
 
+// function useLocationRestaurant(id) {
+// //   return useSelector( state => {
+// //     console.log(state);
+// //     Object.values(state.restaurants).find(obj => obj.id === id); return obj.address)
+// //   }
+// //   return
+// //   );
+// // }
+
 export {
   useOrder,
   useRestId,
@@ -71,4 +80,5 @@ export {
   useSelectorCart,
   useSelectorTotal,
   useMenu
+  // useLocationLocation
 };
