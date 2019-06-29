@@ -7,7 +7,12 @@ import { Route, Redirect } from "@reach/router";
 import { useReset } from "../action-hook";
 import Modal from "../components/Modal";
 
+import { Dialog } from "@reach/dialog";
+import "@reach/dialog/styles.css";
+
 function HeaderBar({ routePath, titleBar }) {
+  const [showDialog, setShowDialog] = useState(false);
+
   const headerCss = {
     display: "flex",
     flexDirection: "row",
@@ -28,7 +33,6 @@ function HeaderBar({ routePath, titleBar }) {
   };
 
   const buttoncss = {
-    backgroundColor: "Transparent",
     backgroundRepeat: "no-repeat",
     border: "none",
     cursor: "pointer",
@@ -43,24 +47,33 @@ function HeaderBar({ routePath, titleBar }) {
     reset();
   }
 
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
 
-  function handleModal() {
-    setShow(true);
-  }
+  // function handleModal() {
+  //   setShow(true);
+  // }
 
   return (
     <div css={headerCss}>
       {titleBar === "Product List" ? (
-        <button css={buttoncss} onClick={handleModal}>
-          <Icon name="arrow alternate circle left outline" size="large" />
+        <button css={buttoncss} onClick={() => setShowDialog(true)}>
+          {/* <Icon name="arrow alternate circle left outline" size="large" /> */}
+          <Dialog isOpen={showDialog} onDismiss={() => setShowDialog(true)}>
+            <p>¿Estás seguro? Podrías perder tus productos</p>
+            <button onClick={() => setShowDialog(false)}>Sí</button>
+            <button onClick={() => setShowDialog(false)}>
+              No por favorcito, deseo quedarme
+            </button>
+          </Dialog>
         </button>
       ) : (
         <Link to={routePath} style={{ color: "white" }}>
           <Icon name="arrow alternate circle left outline" size="large" />
         </Link>
       )}
-      {show ? <Modal /> : null}
+
+      {/* {show ? <Modal /> : null} */}
+
       {/* <Link to={routePath} style={{ color: "white" }}>
         <Icon name="arrow alternate circle left outline" size="large" />
       </Link> */}
