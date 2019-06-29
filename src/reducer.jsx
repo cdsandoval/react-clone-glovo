@@ -5,7 +5,8 @@ const initialState = {
   user: { currentUser: {} },
   restaurants: {},
   menu: {},
-  order: {}
+  order: {},
+  restaurant_id: ""
 };
 
 function cartReducer(state = initialState.cart, action = {}) {
@@ -22,9 +23,7 @@ function cartReducer(state = initialState.cart, action = {}) {
     case "REMOVE_PRODUCT": {
       const updatedCart = { ...state };
       delete updatedCart[action.payload.id];
-      return {
-        cart: updatedCart
-      };
+      return updatedCart;
     }
     case "DECREASE_PRODUCT": {
       return {
@@ -103,12 +102,24 @@ function orderReducer(state = initialState.order, action) {
   }
 }
 
+function restIdReducer(state = initialState.restaurant_id, action) {
+  switch (action.type) {
+    case "ADD_REST_ID": {
+      return action.payload;
+    }
+    default: {
+      return state;
+    }
+  }
+}
+
 const reducer = combineReducers({
   cart: cartReducer,
   user: userReducer,
   restaurants: restaurantsReducer,
   menu: menuReducer,
-  order: orderReducer
+  order: orderReducer,
+  restid: restIdReducer
 });
 
 export default reducer;

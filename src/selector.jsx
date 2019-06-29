@@ -40,29 +40,16 @@ function useUser() {
   }, shallowEqual);
 }
 
-function useLoading() {
+function useRestId() {
   return useSelector(state => {
-    if (state.user.loading) {
-      return state.user.loading;
-    }
-    return null;
-  }, shallowEqual);
-}
-
-function useError() {
-  return useSelector(state => {
-    if (state.user.error) {
-      return state.user.error;
-    }
-    return null;
+    return state.restid;
   }, shallowEqual);
 }
 
 export {
+  useRestId,
   useProductfromCart,
   useUser,
-  useLoading,
-  useError,
   useRestaurants,
   useSelectorCart,
   useSelectorTotal,

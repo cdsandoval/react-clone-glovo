@@ -2,16 +2,26 @@
 import { jsx } from "@emotion/core";
 import { Button } from "../components/ui";
 import { usePostOrder } from "../action-hook";
+import { useRestId, useSelectorCart } from "../selector";
 
 function ConfirmOrder() {
   const order = usePostOrder();
+  const restid = useRestId();
+  const cart = useSelectorCart();
 
+  console.log(restid);
   function sendOrder() {
     const data = {
-      restaurant_id: 1,
-      order_items_attributes: 2
+      order: {
+        restaurant_id: restid,
+        order_items_attributes: Object.values(cart).map(value => {
+          return {
+            menu_item_id: value.id,
+            quantity: value.quantity
+          };
+        })
+      }
     };
-
     order(data);
   }
   return (
@@ -25,10 +35,10 @@ function ConfirmOrder() {
             color: "white"
           }
         }}
+        onClick={sendOrder}
       >
         Confirm Order
       </Button>
-      <button onClick={sendOrder}>AQUI</button>
     </div>
   );
 }

@@ -12,6 +12,13 @@ function increaseQuantity(id) {
   };
 }
 
+function addRestId(id) {
+  return {
+    type: "ADD_REST_ID",
+    payload: id
+  };
+}
+
 function decreaseQuantity(id) {
   return {
     type: "DECREASE_PRODUCT",
@@ -130,5 +137,6 @@ export {
   removeCart,
   listRestaurants,
   listMenu,
-  postOrder
+  postOrder,
+  addRestId
 };

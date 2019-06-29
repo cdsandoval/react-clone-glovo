@@ -10,8 +10,14 @@ import {
   logout,
   listRestaurants,
   listMenu,
-  postOrder
+  postOrder,
+  addRestId
 } from "./action";
+
+export function useRestId() {
+  const dispatch = useDispatch();
+  return React.useCallback(id => dispatch(addRestId(id)), [dispatch]);
+}
 
 export function useLogin() {
   const dispatch = useDispatch();
