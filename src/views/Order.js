@@ -7,6 +7,7 @@ import ConfirmOrder from "../components/ConfirmOrder";
 import PickUp from "../components/PickUp";
 import Amount from "../components/Amount";
 import { useUser } from "../selector";
+import HeaderBar from "../components/HeaderBar";
 
 function Order({
   description = "descripcion",
@@ -19,6 +20,8 @@ function Order({
 
   return (
     <div>
+      <HeaderBar routePath="/product-list" titleBar="Order" />
+
       {Object.values(cartProducts).map(product => {
         return <OrderItem {...product} />;
       })}

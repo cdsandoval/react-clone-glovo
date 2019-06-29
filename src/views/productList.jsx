@@ -13,6 +13,7 @@ function ProductList() {
 
   return (
     <>
+      <HeaderBar routePath="/" titleBar="Product List" />
       <section>
         {use.map(value => {
           return <Product cart={value} />;
