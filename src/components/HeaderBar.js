@@ -1,10 +1,16 @@
 /** @jsx jsx */
-import React from "react";
+import { useState } from "react";
 import { jsx } from "@emotion/core";
 import { Icon } from "semantic-ui-react";
 import { Link } from "@reach/router";
+import { useReset } from "../action-hook";
+
+import { Dialog } from "@reach/dialog";
+import "@reach/dialog/styles.css";
 
 function HeaderBar({ routePath, titleBar }) {
+  const [showDialog, setShowDialog] = useState(false);
+
   const headerCss = {
     display: "flex",
     flexDirection: "row",
@@ -24,11 +30,44 @@ function HeaderBar({ routePath, titleBar }) {
     margin: 0
   };
 
+  const buttoncss = {
+    background: "transparent",
+    backgroundRepeat: "no-repeat",
+    border: "none",
+    cursor: "pointer",
+    overflow: "hidden",
+    color: "white"
+  };
+
+  const reset = useReset();
+
+  function handleYes() {
+    setShowDialog(false);
+    reset();
+  }
+
   return (
     <div css={headerCss}>
-      <Link to={routePath} style={{ color: "white" }}>
-        <Icon name="arrow alternate circle left outline" size="large" />
-      </Link>
+      {titleBar === "Product List" ? (
+        <button css={buttoncss} onClick={() => setShowDialog(true)}>
+          <Icon name="arrow alternate circle left outline" size="large">
+            <Dialog isOpen={showDialog} onDismiss={() => setShowDialog(true)}>
+              <p>¿Estás seguro? Podrías perder tus productos</p>
+              <button onClick={handleYes}>
+                <Link to="/">Sí</Link>
+              </button>
+              <button onClick={() => setShowDialog(false)}>
+                No, deseo quedarme
+              </button>
+            </Dialog>
+          </Icon>
+        </button>
+      ) : (
+        <Link to={routePath} style={{ color: "white" }}>
+          <Icon name="arrow alternate circle left outline" size="large" />
+        </Link>
+      )}
+
       <br />
       <h1 css={h1}>{titleBar}</h1>
     </div>

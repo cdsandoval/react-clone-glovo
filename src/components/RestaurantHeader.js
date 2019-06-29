@@ -3,10 +3,12 @@ import React from "react";
 import { jsx } from "@emotion/core";
 import { Icon } from "semantic-ui-react";
 import { Link } from "@reach/router";
-import { useLogout } from "../action-hook";
+import { useLogout, useReset } from "../action-hook";
+// import { Route, Redirect } from 'react-router'
 
 function RestaurantHeader() {
   const logout = useLogout();
+
   const headerCss = {
     display: "flex",
     flexDirection: "row",

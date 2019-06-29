@@ -7,7 +7,6 @@ import { Router } from "@reach/router";
 import Login from "./views/Login";
 import Record from "./views/Record";
 import Order from "./views/Order";
-import HeaderBar from "./components/HeaderBar";
 
 function App() {
   return (

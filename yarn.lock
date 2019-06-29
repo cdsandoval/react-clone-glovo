@@ -1210,6 +1210,29 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
+"@reach/component-component@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@reach/component-component/-/component-component-0.1.3.tgz#5d156319572dc38995b246f81878bc2577c517e5"
+  integrity sha512-a1USH7L3bEfDdPN4iNZGvMEFuBfkdG+QNybeyDv8RloVFgZYRoM+KGXyy2KOfEnTUM8QWDRSROwaL3+ts5Angg==
+
+"@reach/dialog@^0.2.9":
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.2.9.tgz#6375ec4adc1e22838aeede15f57d5eb5ac0e571c"
+  integrity sha512-4plyTRt2X4bB9A5fDFXH0bxb4aipLyAuRVMpOuA1RekFgvkxFn65em2CWYSzRsVf3aTQ2cEnYET4a5H2Qu8a5Q==
+  dependencies:
+    "@reach/component-component" "^0.1.3"
+    "@reach/portal" "^0.2.1"
+    "@reach/utils" "^0.2.3"
+    react-focus-lock "^1.17.7"
+    react-remove-scroll "^1.0.2"
+
+"@reach/portal@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@reach/portal/-/portal-0.2.1.tgz#07720b999e0063a9e179c14dbdc60fd991cfc9fa"
+  integrity sha512-pUQ0EtCcYm4ormEjJmdk4uzZCxOpaRHB8FDKJXy6q6GqRqQwZ4lAT1f2Tvw0DAmULmyZTpe1/heXY27Tdnct+Q==
+  dependencies:
+    "@reach/component-component" "^0.1.3"
+
 "@reach/router@^1.2.1":
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@reach/router/-/router-1.2.1.tgz#34ae3541a5ac44fa7796e5506a5d7274a162be4e"
@@ -1220,6 +1243,11 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
+
+"@reach/utils@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.2.3.tgz#820f6a6af4301b4c5065cfc04bb89e6a3d1d723f"
+  integrity sha512-zM9rA8jDchr05giMhL95dPeYkK67cBQnIhCVrOKKqgWGsv+2GE/HZqeptvU4zqs0BvIqsThwov+YxVNVh5csTQ==
 
 "@semantic-ui-react/event-stack@^3.1.0":
   version "3.1.0"
@@ -3587,9 +3615,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.3.122, electron-to-chromium@^1.3.164:
-  version "1.3.174"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.174.tgz#011c68d4130e995cbb69c533e147d7f4856e9f39"
-  integrity sha512-OEh3EARo2B07ZRtxB0u9GqWyWmTeNS+diMp5bjw4kqMjgpzqM0w1zUOyErDsyWxTdArbvZ79T/w5n3WsBVHLfA==
+  version "1.3.177"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.177.tgz#6ee78908c38f8021f6864a0ad534452fefd1e24c"
+  integrity sha512-vMoq8iU57YZgxrW9kglf1ZEBcU+Ec72OlR+SH/UdBTKS6tZTCypxa8pmD1CPZ3olU4IJX2ujilGkvpn0GHSwTQ==
 
 elliptic@^6.0.0:
   version "6.5.0"
@@ -4263,6 +4291,11 @@ flush-write-stream@^1.0.0:
   dependencies:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
+
+focus-lock@^0.6.3:
+  version "0.6.5"
+  resolved "https://registry.yarnpkg.com/focus-lock/-/focus-lock-0.6.5.tgz#f6eb37832a9b1b205406175f5277396a28c0fce1"
+  integrity sha512-i/mVBOoa9o+tl+u9owOJUF8k8L85odZNIsctB+JAK2HFT8jckiBwmk+3uydlm6FN8czgnkIwQtBv6yyAbrzXjw==
 
 follow-redirects@^1.0.0:
   version "1.7.0"
@@ -6665,9 +6698,9 @@ node-pre-gyp@^0.12.0:
     tar "^4"
 
 node-releases@^1.1.13, node-releases@^1.1.23:
-  version "1.1.23"
-  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.23.tgz#de7409f72de044a2fa59c097f436ba89c39997f0"
-  integrity sha512-uq1iL79YjfYC0WXoHbC/z28q/9pOl8kSHaXdWmAAc8No+bDwqkZbzIJz55g/MUsPgSGm9LZ7QSUbzTcH5tz47w==
+  version "1.1.24"
+  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.24.tgz#2fb494562705c01bfb81a7af9f8584c4d56311b4"
+  integrity sha512-wym2jptfuKowMmkZsfCSTsn8qAVo8zm+UiQA6l5dNqUcpfChZSnS/vbbpOeXczf+VdPhutxh+99lWHhdd6xKzg==
   dependencies:
     semver "^5.3.0"
 
@@ -6717,9 +6750,9 @@ npm-bundled@^1.0.1:
   integrity sha512-8/JCaftHwbd//k6y2rEWp6k1wxVfpFzB6t1p825+cUb7Ym2XQfhwIC5KwhrvzZRJu+LtDE585zVaS32+CGtf0g==
 
 npm-packlist@^1.1.6:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/npm-packlist/-/npm-packlist-1.4.1.tgz#19064cdf988da80ea3cee45533879d90192bbfbc"
-  integrity sha512-+TcdO7HJJ8peiiYhvPxsEDhF3PJFGUGRcFsGve3vxvxdcpO2Z4Z7rkosRM0kWj6LfbK/P0gu3dzk5RU1ffvFcw==
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/npm-packlist/-/npm-packlist-1.4.3.tgz#44baf075a36ec9217b307eb77a3f4eb3db0ec1ff"
+  integrity sha512-YABl09v5EoSw3uea9/gUfmqPUSbhhv7Qht8f7VKQWzTEEeUr5q+9w3jOvjIZ31v8qmR4UrkwpPvIk43MDevvsg==
   dependencies:
     ignore-walk "^3.0.1"
     npm-bundled "^1.0.1"
@@ -8167,6 +8200,13 @@ react-app-polyfill@^1.0.1:
     regenerator-runtime "0.13.2"
     whatwg-fetch "3.0.0"
 
+react-clientside-effect@^1.2.0:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/react-clientside-effect/-/react-clientside-effect-1.2.1.tgz#feb81abe9531061d4987941c15a00f2b3d0b6071"
+  integrity sha512-foSwZatJak6r+F4OqJ8a+MOWcBi3jwa7/RPdJIDZI1Ck0dn/FJZkkFu7YK+SiZxsCZIrotolxHSobcnBHgIjfw==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
 react-dev-utils@^9.0.1:
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-9.0.1.tgz#5c03d85a0b2537d0c46af7165c24a7dfb274bef2"
@@ -8213,6 +8253,16 @@ react-error-overlay@^5.1.6:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.1.6.tgz#0cd73407c5d141f9638ae1e0c63e7b2bf7e9929d"
   integrity sha512-X1Y+0jR47ImDVr54Ab6V9eGk0Hnu7fVWGeHQSOXHf/C2pF9c6uy3gef8QUeuUiWlNb0i08InPSE5a/KJzNzw1Q==
 
+react-focus-lock@^1.17.7:
+  version "1.19.1"
+  resolved "https://registry.yarnpkg.com/react-focus-lock/-/react-focus-lock-1.19.1.tgz#2f3429793edaefe2d077121f973ce5a3c7a0651a"
+  integrity sha512-TPpfiack1/nF4uttySfpxPk4rGZTLXlaZl7ncZg/ELAk24Iq2B1UUaUioID8H8dneUXqznT83JTNDHDj+kwryw==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    focus-lock "^0.6.3"
+    prop-types "^15.6.2"
+    react-clientside-effect "^1.2.0"
+
 react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
@@ -8246,6 +8296,22 @@ react-redux@^7.1.0:
     loose-envify "^1.4.0"
     prop-types "^15.7.2"
     react-is "^16.8.6"
+
+react-remove-scroll-bar@^1.1.5:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-remove-scroll-bar/-/react-remove-scroll-bar-1.2.0.tgz#07250b2bc581f56315759c454c9b159dd04ba49d"
+  integrity sha512-8xSYR6xgW8QW65k38qB1Sh6ouTRjZ7BEteepR9tACd1rSaRyVYWabFxYLNOr4l1blZlqb81GEmDpUoPm7LsUTA==
+  dependencies:
+    react-style-singleton "^1.1.0"
+    tslib "^1.0.0"
+
+react-remove-scroll@^1.0.2:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/react-remove-scroll/-/react-remove-scroll-1.0.8.tgz#a5aadc56368345a51ba524582c842a773849f609"
+  integrity sha512-AS6gFBO6T2CP0TgmDjq3Ip0Fz1HKyv+lzNrQAkJBSWGyOYaMWLMDy77mQJ7qEyy6fK0pI+Cz5x3X81/ux6SBew==
+  dependencies:
+    react-remove-scroll-bar "^1.1.5"
+    tslib "^1.0.0"
 
 react-scripts@3.0.1:
   version "3.0.1"
@@ -8306,6 +8372,14 @@ react-scripts@3.0.1:
     workbox-webpack-plugin "4.2.0"
   optionalDependencies:
     fsevents "2.0.6"
+
+react-style-singleton@^1.1.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-style-singleton/-/react-style-singleton-1.1.1.tgz#b2b698765519da812b80f55ab3c5fc5d849a2e63"
+  integrity sha512-0JD+XC5veR3oxf7GzIXipr89sM8R3rWnOR/gpzIV0DnoRBrcTvvkqyMu9icDYqM/6CWJhYcH5Jdy6Nim7PmoTQ==
+  dependencies:
+    invariant "^2.2.4"
+    tslib "^1.0.0"
 
 react@^16.8.6:
   version "16.8.6"
@@ -9616,7 +9690,7 @@ ts-pnp@1.1.2, ts-pnp@^1.0.0:
   resolved "https://registry.yarnpkg.com/ts-pnp/-/ts-pnp-1.1.2.tgz#be8e4bfce5d00f0f58e0666a82260c34a57af552"
   integrity sha512-f5Knjh7XCyRIzoC/z1Su1yLLRrPrFCgtUAh/9fCSP6NKbATwpOL1+idQVXQokK9GRFURn/jYPGPfegIctwunoA==
 
-tslib@^1.8.1, tslib@^1.9.0:
+tslib@^1.0.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
   integrity sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
