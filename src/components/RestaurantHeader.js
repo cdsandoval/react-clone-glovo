@@ -9,13 +9,6 @@ import { useLogout, useReset } from "../action-hook";
 function RestaurantHeader() {
   const logout = useLogout();
 
-  // const reset = useReset();
-
-  // function handleYes(){
-  //   Redirect("/");
-  //   reset();
-  // }
-
   const headerCss = {
     display: "flex",
     flexDirection: "row",

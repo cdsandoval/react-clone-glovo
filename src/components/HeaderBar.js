@@ -53,7 +53,7 @@ function HeaderBar({ routePath, titleBar }) {
           <Icon name="arrow alternate circle left outline" size="large">
             <Dialog isOpen={showDialog} onDismiss={() => setShowDialog(true)}>
               <p>¿Estás seguro? Podrías perder tus productos</p>
-              <button onClick={() => handleYes}>
+              <button onClick={handleYes}>
                 <Link to="/">Sí</Link>
               </button>
               <button onClick={() => setShowDialog(false)}>
