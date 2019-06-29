@@ -1,8 +1,28 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import { Button } from "../components/ui";
+import { usePostOrder } from "../action-hook";
+import { useRestId, useSelectorCart } from "../selector";
 
 function ConfirmOrder() {
+  const order = usePostOrder();
+  const restid = useRestId();
+  const cart = useSelectorCart();
+
+  function sendOrder() {
+    const data = {
+      order: {
+        restaurant_id: restid,
+        order_items_attributes: Object.values(cart).map(value => {
+          return {
+            menu_item_id: value.id,
+            quantity: value.quantity
+          };
+        })
+      }
+    };
+    order(data);
+  }
   return (
     <div>
       <Button
@@ -14,6 +34,7 @@ function ConfirmOrder() {
             color: "white"
           }
         }}
+        onClick={sendOrder}
       >
         Confirm Order
       </Button>
