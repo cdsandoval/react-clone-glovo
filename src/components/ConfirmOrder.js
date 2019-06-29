@@ -1,8 +1,19 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import { Button } from "../components/ui";
+import { usePostOrder } from "../action-hook";
 
 function ConfirmOrder() {
+  const order = usePostOrder();
+
+  function sendOrder() {
+    const data = {
+      restaurant_id: 1,
+      order_items_attributes: 2
+    };
+
+    order(data);
+  }
   return (
     <div>
       <Button
@@ -17,6 +28,7 @@ function ConfirmOrder() {
       >
         Confirm Order
       </Button>
+      <button onClick={sendOrder}>AQUI</button>
     </div>
   );
 }

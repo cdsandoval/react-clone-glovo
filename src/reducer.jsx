@@ -4,7 +4,8 @@ const initialState = {
   cart: {},
   user: { currentUser: {} },
   restaurants: {},
-  menu: {}
+  menu: {},
+  order: {}
 };
 
 function cartReducer(state = initialState.cart, action = {}) {
@@ -91,11 +92,23 @@ function menuReducer(state = initialState.menu, action) {
   }
 }
 
+function orderReducer(state = initialState.order, action) {
+  switch (action.type) {
+    case "ORDER": {
+      return action.payload;
+    }
+    default: {
+      return state;
+    }
+  }
+}
+
 const reducer = combineReducers({
   cart: cartReducer,
   user: userReducer,
   restaurants: restaurantsReducer,
-  menu: menuReducer
+  menu: menuReducer,
+  order: orderReducer
 });
 
 export default reducer;

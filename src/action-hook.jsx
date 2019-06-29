@@ -9,7 +9,8 @@ import {
   login,
   logout,
   listRestaurants,
-  listMenu
+  listMenu,
+  postOrder
 } from "./action";
 
 export function useLogin() {
@@ -52,7 +53,12 @@ export function useListRestaurants() {
   return React.useCallback(() => dispatch(listRestaurants()), [dispatch]);
 }
 
-export function useListMenu(id) {
+export function useListMenu() {
   const dispatch = useDispatch();
   return React.useCallback(id => dispatch(listMenu(id)), [dispatch]);
+}
+
+export function usePostOrder() {
+  const dispatch = useDispatch();
+  return React.useCallback(order => dispatch(postOrder(order)), [dispatch]);
 }
