@@ -1,11 +1,9 @@
 /** @jsx jsx */
-import React, { useState } from "react";
+import { useState } from "react";
 import { jsx } from "@emotion/core";
 import { Icon } from "semantic-ui-react";
 import { Link } from "@reach/router";
-import { Route, Redirect } from "@reach/router";
 import { useReset } from "../action-hook";
-import Modal from "../components/Modal";
 
 import { Dialog } from "@reach/dialog";
 import "@reach/dialog/styles.css";
