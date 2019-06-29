@@ -4,7 +4,7 @@ import { jsx } from "@emotion/core";
 import { Icon } from "semantic-ui-react";
 import { Link } from "@reach/router";
 
-function HeaderBar({ routePath = "/", titleBar = "I need a path" }) {
+function HeaderBar({ routePath, titleBar }) {
   const headerCss = {
     display: "flex",
     flexDirection: "row",

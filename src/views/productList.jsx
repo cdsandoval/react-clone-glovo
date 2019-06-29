@@ -49,6 +49,7 @@ function ProductList() {
   if (!user.name) return <Redirect to="/login" noThrow />;
 
   return (
+<<<<<<< HEAD
     <section>
       {use.map(value => {
         return <Product cart={value} />;
@@ -73,6 +74,35 @@ function ProductList() {
         </button>
       </Link>
     </section>
+=======
+    <>
+      <HeaderBar routePath="/" titleBar="Product List" />
+      <section>
+        {Object.values(menu_items).map(value => {
+          return <Product cart={value} />;
+        })}
+        <Link to="/order">
+          <button
+            css={{
+              position: "fixed",
+              bottom: "15px",
+              left: "35%",
+              padding: "10px",
+              width: "30%",
+              border: "2px solid white",
+              color: "white",
+              backgroundColor: "green",
+              textAlign: "center",
+              cursor: "pointer",
+              fontWeight: "bold"
+            }}
+          >
+            ORDER
+          </button>
+        </Link>
+      </section>
+    </>
+>>>>>>> Add props to head bar
   );
 }
 
