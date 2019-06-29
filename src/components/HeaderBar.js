@@ -24,11 +24,30 @@ function HeaderBar({ routePath, titleBar }) {
     margin: 0
   };
 
+  const buttoncss = {
+    backgroundColor: "Transparent",
+    backgroundRepeat: "no-repeat",
+    border: "none",
+    cursor: "pointer",
+    overflow: "hidden",
+    color: "white"
+  };
+
   return (
     <div css={headerCss}>
-      <Link to={routePath} style={{ color: "white" }}>
+      {titleBar === "Product List" ? (
+        <button css={buttoncss}>
+          <Icon name="arrow alternate circle left outline" size="large" />
+        </button>
+      ) : (
+        <Link to={routePath} style={{ color: "white" }}>
+          <Icon name="arrow alternate circle left outline" size="large" />
+        </Link>
+      )}
+
+      {/* <Link to={routePath} style={{ color: "white" }}>
         <Icon name="arrow alternate circle left outline" size="large" />
-      </Link>
+      </Link> */}
       <br />
       <h1 css={h1}>{titleBar}</h1>
     </div>
