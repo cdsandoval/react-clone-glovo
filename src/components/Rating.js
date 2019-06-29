@@ -10,7 +10,14 @@ function Rating({ ratingNumber }) {
   };
 
   return (
-    <div>
+    <div
+      css={{
+        position: "relative",
+        zIndex: "3",
+        textAlign: "center",
+        marginTop: "30px"
+      }}
+    >
       <span css={rating}>{ratingNumber}</span>
       <span css={rating}>
         <Icon name="star outline" size="small" />

@@ -46,7 +46,7 @@ function addCart(product) {
 
 function login(user) {
   return async dispatch => {
-    const response = await fetch("http://localhost:3000/api/login", {
+    const response = await fetch(API_LOGIN_URL, {
       method: "POST",
       credentials: "include",
       body: JSON.stringify(user),
@@ -88,6 +88,21 @@ function listRestaurants() {
   };
 }
 
+function listMenu(id) {
+  return async dispatch => {
+    const response = await fetch(`${API_RESTAURANT_URL}/${id}`, {
+      credentials: "include",
+      headers: {
+        "Content-Type": "aplication/json"
+      }
+    });
+    const payload = await response.json();
+    console.log(payload);
+    if (!response.ok) dispatch({ type: "DEFAULT" });
+    dispatch({ type: "LIST_MENU", payload });
+  };
+}
+
 export {
   login,
   logout,
@@ -96,5 +111,6 @@ export {
   reset,
   addCart,
   removeCart,
-  listRestaurants
+  listRestaurants,
+  listMenu
 };

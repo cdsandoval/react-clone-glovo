@@ -2,8 +2,16 @@
 import React from "react";
 import { jsx } from "@emotion/core";
 import Rating from "./Rating";
+import { Link } from "@reach/router";
+import { useListMenu } from "../action-hook";
 
-function Restaurant({ name, ratingValue }) {
+function Restaurant({ name, ratingValue, id }) {
+  const menu_list = useListMenu();
+
+  function menuList() {
+    menu_list(id);
+  }
+
   const container = {
     position: "relative",
     backgroundColor: "white",
@@ -31,26 +39,28 @@ function Restaurant({ name, ratingValue }) {
 
   const spanCss = {
     zIndex: 3,
+    position: "relative",
     fontSize: "1.5em",
+    fontWeight: "bold",
     color: "white",
     textShadow: "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"
   };
 
   return (
     <div css={container}>
-      <a href="/product-list">
+      <Link to="/product-list" onClick={menuList}>
         <img
           css={imgCss}
           src="http://lorempixel.com/500/250/food/?random"
           alt="Random Food"
         />
-      </a>
 
-      <span css={spanCss}>{name}</span>
+        <span css={spanCss}>{name}</span>
 
-      <span css={spanCss}>
-        <Rating ratingNumber={ratingValue} />
-      </span>
+        <span css={spanCss}>
+          <Rating ratingNumber={ratingValue} />
+        </span>
+      </Link>
     </div>
   );
 }

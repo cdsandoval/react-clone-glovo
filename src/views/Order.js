@@ -1,10 +1,12 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
+import { Redirect } from "@reach/router";
 import { useSelectorCart } from "../selector";
 import OrderItem from "./OrderItem";
 import ConfirmOrder from "../components/ConfirmOrder";
 import PickUp from "../components/PickUp";
 import Amount from "../components/Amount";
+import { useUser } from "../selector";
 
 function Order({
   description = "descripcion",
@@ -12,7 +14,8 @@ function Order({
   price = "price"
 }) {
   const cartProducts = useSelectorCart();
-  console.log(cartProducts);
+  const user = useUser();
+  if (!user.name) return <Redirect to="/login" noThrow />;
 
   return (
     <div>

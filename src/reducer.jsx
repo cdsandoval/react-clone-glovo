@@ -3,7 +3,8 @@ import { combineReducers } from "redux";
 const initialState = {
   cart: {},
   user: { currentUser: {} },
-  restaurants: {}
+  restaurants: {},
+  menu: {}
 };
 
 function cartReducer(state = initialState.cart, action = {}) {
@@ -79,10 +80,22 @@ function restaurantsReducer(state = initialState.restaurants, action) {
   }
 }
 
+function menuReducer(state = initialState.menu, action) {
+  switch (action.type) {
+    case "LIST_MENU": {
+      return action.payload.menu_items;
+    }
+    default: {
+      return state;
+    }
+  }
+}
+
 const reducer = combineReducers({
   cart: cartReducer,
   user: userReducer,
-  restaurants: restaurantsReducer
+  restaurants: restaurantsReducer,
+  menu: menuReducer
 });
 
 export default reducer;

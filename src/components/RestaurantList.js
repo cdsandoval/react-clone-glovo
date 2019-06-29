@@ -17,13 +17,18 @@ function RestaurantList() {
 
   React.useEffect(() => {
     restaurants();
-    console.log(listRestaurants);
   }, []);
 
   return (
     <section css={body}>
       {listRestaurants.map(value => {
-        return <Restaurant name={value.name} ratingValue={value.ranking} />;
+        return (
+          <Restaurant
+            name={value.name}
+            ratingValue={value.ranking}
+            id={value.id}
+          />
+        );
       })}
     </section>
   );

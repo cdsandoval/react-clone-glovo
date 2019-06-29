@@ -26,6 +26,10 @@ function useRestaurants() {
   return useSelector(state => Object.values(state.restaurants), shallowEqual);
 }
 
+function useMenu() {
+  return useSelector(state => Object.values(state.menu), shallowEqual);
+}
+
 function useUser() {
   return useSelector(state => {
     if (state.user) {
@@ -61,5 +65,6 @@ export {
   useError,
   useRestaurants,
   useSelectorCart,
-  useSelectorTotal
+  useSelectorTotal,
+  useMenu
 };
