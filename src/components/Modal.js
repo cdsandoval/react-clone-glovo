@@ -10,7 +10,6 @@ function Modal() {
   return (
     <div css={{ zIndex: 100 }}>
       <button onClick={() => setShowDialog(true)}>Show Dialog</button>
-
       <Dialog isOpen={showDialog} onDismiss={() => setShowDialog(true)}>
         <p>¿Estás seguro? Podrías perder tus productos</p>
         <button onClick={() => setShowDialog(false)}>Yes</button>
