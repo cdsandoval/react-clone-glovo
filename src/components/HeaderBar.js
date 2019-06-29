@@ -43,9 +43,13 @@ function HeaderBar({ routePath, titleBar }) {
 
   const reset = useReset();
 
-  function handleYes() {
-    Redirect("/");
+  function handleReset() {
     reset();
+  }
+
+  function handleYes() {
+    setShowDialog(false);
+    handleReset();
   }
 
   // const [show, setShow] = useState(false);
@@ -61,7 +65,9 @@ function HeaderBar({ routePath, titleBar }) {
           <Icon name="arrow alternate circle left outline" size="large">
             <Dialog isOpen={showDialog} onDismiss={() => setShowDialog(true)}>
               <p>¿Estás seguro? Podrías perder tus productos</p>
-              <button onClick={() => setShowDialog(false)}>Sí</button>
+              <button onClick={() => handleYes}>
+                <Link to="/">Sí</Link>
+              </button>
               <button onClick={() => setShowDialog(false)}>
                 No, deseo quedarme
               </button>
