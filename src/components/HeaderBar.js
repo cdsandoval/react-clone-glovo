@@ -41,13 +41,9 @@ function HeaderBar({ routePath, titleBar }) {
 
   const reset = useReset();
 
-  function handleReset() {
-    reset();
-  }
-
   function handleYes() {
     setShowDialog(false);
-    handleReset();
+    reset();
   }
 
   return (

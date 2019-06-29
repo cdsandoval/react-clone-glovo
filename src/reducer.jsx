@@ -41,7 +41,7 @@ function cartReducer(state = initialState.cart, action = {}) {
       };
     }
     case "RESET": {
-      return initialState.cart;
+      return {};
     }
     default: {
       return state;
