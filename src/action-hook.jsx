@@ -51,3 +51,8 @@ export function useListRestaurants() {
   const dispatch = useDispatch();
   return React.useCallback(() => dispatch(listRestaurants()), [dispatch]);
 }
+
+export function useListMenu(id) {
+  const dispatch = useDispatch();
+  return React.useCallback(id => dispatch(listMenu(id)), [dispatch]);
+}
