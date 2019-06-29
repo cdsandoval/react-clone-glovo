@@ -2,7 +2,14 @@ import { combineReducers } from "redux";
 
 const initialState = {
   cart: {},
-  user: { currentUser: {} },
+  user: {
+    currentUser: {
+      //Usuario de prueba
+      id: 40,
+      name: "Josh Anderson",
+      email: "josh@delivery.pe"
+    }
+  },
   restaurants: {},
   menu: {},
   order: {},
