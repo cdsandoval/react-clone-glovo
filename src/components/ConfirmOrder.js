@@ -9,7 +9,6 @@ function ConfirmOrder() {
   const restid = useRestId();
   const cart = useSelectorCart();
 
-  console.log(restid);
   function sendOrder() {
     const data = {
       order: {

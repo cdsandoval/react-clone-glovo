@@ -30,7 +30,7 @@ function RestaurantHeader() {
 
   return (
     <div css={headerCss}>
-      <Link to="/login" style={{ color: "white" }}>
+      <Link to="/record" style={{ color: "white" }}>
         <Icon name="user circle outline" size="large" />
       </Link>
       <h1 css={h1}>Catalog</h1>
