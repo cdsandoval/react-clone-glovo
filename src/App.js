@@ -7,7 +7,6 @@ import { Router } from "@reach/router";
 import Login from "./views/Login";
 import Record from "./views/Record";
 import Order from "./views/Order";
-import Modal from "./components/Modal";
 
 function App() {
   return (
@@ -22,7 +21,6 @@ function App() {
         <ProductList path="/product-list" />
         <Record path="/record" />
         <Order path="/order" />
-        <Modal path="/modal" />
       </Router>
     </div>
   );

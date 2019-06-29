@@ -50,12 +50,6 @@ function HeaderBar({ routePath, titleBar }) {
     handleReset();
   }
 
-  // const [show, setShow] = useState(false);
-
-  // function handleModal() {
-  //   setShow(true);
-  // }
-
   return (
     <div css={headerCss}>
       {titleBar === "Product List" ? (
@@ -78,11 +72,6 @@ function HeaderBar({ routePath, titleBar }) {
         </Link>
       )}
 
-      {/* {show ? <Modal /> : null} */}
-
-      {/* <Link to={routePath} style={{ color: "white" }}>
-        <Icon name="arrow alternate circle left outline" size="large" />
-      </Link> */}
       <br />
       <h1 css={h1}>{titleBar}</h1>
     </div>
