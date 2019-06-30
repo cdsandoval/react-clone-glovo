@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PickUp Component 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  background: white;
+  border: 1px solid #eaeaea;
+  border-radius: .25rem;
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
+  font-size: 1.5rem;
+  padding: .5rem;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.emotion-0:focus {
+  outline: none;
+}
+
+<div>
+    <input
+      aria-label="Restaurant Adress"
+      class="emotion-0"
+      disabled=""
+      type="text"
+      value="Jorge Chavez 184 - Miraflores"
+    />
+  </div>
+</DocumentFragment>
+`;

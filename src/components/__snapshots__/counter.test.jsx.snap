@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter component 1`] = `
+<DocumentFragment>
+  <div>
+    <button
+      aria-label="Increase Quantity"
+    >
+      <i
+        aria-hidden="true"
+        class="minus square big icon"
+      />
+    </button>
+    <span />
+    <button
+      aria-label="Decrease Quantity"
+    >
+      <i
+        aria-hidden="true"
+        class="add square big icon"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;

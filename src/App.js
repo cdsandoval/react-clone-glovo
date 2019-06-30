@@ -1,24 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/** @jsx jsx */
+import React from "react";
+import ProductList from "./views/productList";
+import { Global, jsx } from "@emotion/core";
+import Catalog from "../src/views/Catalog";
+import { Router } from "@reach/router";
+import Login from "./views/Login";
+import Record from "./views/Record";
+import Order from "./views/Order";
+import Location from "./views/Location";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      css={{
+        height: "100vh"
+      }}
+    >
+      <Router>
+        <Login path="/login" />
+        <Catalog path="/" />
+        <ProductList path="/product-list" />
+        <Record path="/record" />
+        <Location path="/location/:id" />
+        <Order path="/order" />
+      </Router>
     </div>
   );
 }

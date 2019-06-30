@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Form on Submit 1`] = `
+<DocumentFragment>
+  .emotion-5 {
+  position: relative;
+  background-color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 40vh;
+  height: 120px;
+  box-sizing: border - box;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0px 5px 9px rgba(0,0,0,0.2);
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.emotion-0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
+}
+
+.emotion-1 {
+  z-index: 3;
+  font-size: 1.5em;
+  color: white;
+  text-shadow: -0.5px 0 black,0 0.5px black,0.5px 0 black,0 -0.5px black;
+}
+
+.emotion-2 {
+  font-size: 15px;
+  margin: 3.5px;
+}
+
+<div
+    class="emotion-5"
+  >
+    <a
+      href="/"
+    >
+      <img
+        alt="Random Food"
+        class="emotion-0"
+        src="http://lorempixel.com/500/250/food/?random"
+      />
+    </a>
+    <span
+      class="emotion-1"
+    />
+    <span
+      class="emotion-1"
+    >
+      <div>
+        <span
+          class="emotion-2"
+        />
+        <span
+          class="emotion-2"
+        >
+          <i
+            aria-hidden="true"
+            class="star outline small icon"
+          />
+        </span>
+      </div>
+    </span>
+  </div>
+</DocumentFragment>
+`;
