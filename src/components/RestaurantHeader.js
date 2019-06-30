@@ -16,7 +16,7 @@ function RestaurantHeader() {
     color: "#fff",
     justifyContent: "space-between",
     alignItems: "center",
-    background: "rgba(245, 230, 83, 1)",
+    background: "rgb(255,210,0)",
     padding: 20,
     width: "100%",
     fontWeight: "bold",
@@ -34,11 +34,8 @@ function RestaurantHeader() {
         <Icon name="user circle outline" size="large" />
       </Link>
       <h1 css={h1}>Catalog</h1>
-
-      <br />
-
       <span>
-        <Link to="/login" onClick={logout}>
+        <Link to="/login" onClick={logout} css={{ color: "white" }}>
           <Icon fitted name="sign out" size="large" />
         </Link>
       </span>

@@ -11,8 +11,14 @@ function ProductList() {
   const user = useUser();
   if (!user.name) return <Redirect to="/login" noThrow />;
 
+  const body = {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center"
+  };
+
   return (
-    <>
+    <div css={body}>
       <HeaderBar routePath="/" titleBar="Product List" />
       <section>
         {use.map(value => {
@@ -21,6 +27,13 @@ function ProductList() {
         <Link to="/order">
           <button
             css={{
+              zIndex: 3,
+              position: "relative",
+              fontSize: "1em",
+              fontWeight: "bold",
+              color: "black",
+              textShadow:
+                "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black",
               position: "fixed",
               bottom: "15px",
               left: "35%",
@@ -38,7 +51,7 @@ function ProductList() {
           </button>
         </Link>
       </section>
-    </>
+    </div>
   );
 }
 

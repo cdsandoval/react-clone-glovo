@@ -32,12 +32,8 @@ function ConfirmOrder() {
     <div>
       <Button
         css={{
-          backgroundColor: "rgba(255,210,0,1)",
-          color: "white",
-          "&:hover": {
-            backgroundColor: "rgba(255,210,0,0.9)",
-            color: "white"
-          }
+          backgroundColor: "rgba(0,168,133,1)",
+          color: "white"
         }}
         onClick={sendOrder}
       >

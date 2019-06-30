@@ -41,35 +41,73 @@ function Product({ cart }) {
     }
   }
 
+  const container = {
+    position: "relative",
+    backgroundColor: "rgb(255,210,0)",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: "40vh",
+    height: "140px",
+    boxSizing: "border - box",
+    padding: 12,
+    borderRadius: 8,
+    boxShadow: "0px 5px 9px rgba(0, 0, 0, 0.2)",
+    overflow: "hidden",
+    margin: "20px 0"
+  };
+
+  const spanCss = {
+    zIndex: 1,
+    position: "abolute",
+    fontSize: "1em",
+    fontWeight: "light",
+    color: "black",
+    textShadow: "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"
+  };
+
+  const imgCss = {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    zIndex: 1,
+    filter: "blur(1px)"
+  };
+
   return (
-    <div
-      css={{
-        borderRadius: "15px",
-        backgroundColor: "#eee",
-        padding: "10px",
-        margin: "15px 0",
-        fontFamily: "Arial",
-        boxShadow: "3px 3px 7px 0px rgba(0,0,0,1)"
-      }}
-    >
+    <div css={container}>
       <div />
       <div
         css={{
           display: "flex",
-          justifyContent: "space-between",
+          flexDirection: "column",
+          alignContent: "center",
           paddingTop: "10px"
         }}
       >
-        <span css={{ fontSize: "1.2em", fontWeight: "bold" }}>{cart.name}</span>
-        <span css={{ fontSize: "1.1em" }}>S/. {cart.price}</span>
+        <span css={spanCss}>{cart.name}</span>
+        <span css={spanCss}>S/. {cart.price}</span>
+        <span css={spanCss}>{cart.description}</span>
       </div>
 
-      <p>{cart.description}</p>
-      <Counter
-        handleDecrease={handleDecrease}
-        handleIncrease={handleIncrease}
-        quantity={quantity}
-      />
+      <div
+        css={{
+          zIndex: 3,
+          position: "relative",
+          fontSize: "1em",
+          fontWeight: "bold",
+          color: "black",
+          textShadow:
+            "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"
+        }}
+      >
+        <Counter
+          handleDecrease={handleDecrease}
+          handleIncrease={handleIncrease}
+          quantity={quantity}
+        />
+      </div>
     </div>
   );
 }
