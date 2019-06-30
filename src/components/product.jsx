@@ -43,7 +43,7 @@ function Product({ cart }) {
 
   const container = {
     position: "relative",
-    backgroundColor: "white",
+    backgroundColor: "rgb(255,210,0)",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
@@ -59,11 +59,11 @@ function Product({ cart }) {
   };
 
   const spanCss = {
-    zIndex: 3,
-    position: "relative",
+    zIndex: 1,
+    position: "abolute",
     fontSize: "1em",
-    fontWeight: "bold",
-    color: "white",
+    fontWeight: "light",
+    color: "black",
     textShadow: "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"
   };
 
@@ -81,26 +81,39 @@ function Product({ cart }) {
       <div
         css={{
           display: "flex",
-          justifyContent: "center",
           flexDirection: "column",
+          alignContent: "center",
           paddingTop: "10px"
         }}
       >
-        <img
+        {/* <img
           css={imgCss}
           src="http://lorempixel.com/500/250/food/?random"
           alt="Random Food"
-        />
+        /> */}
+
         <span css={spanCss}>{cart.name}</span>
         <span css={spanCss}>S/. {cart.price}</span>
-        <p css={spanCss}>{cart.description}</p>
+        <span css={spanCss}>{cart.description}</span>
       </div>
 
-      <Counter
-        handleDecrease={handleDecrease}
-        handleIncrease={handleIncrease}
-        quantity={quantity}
-      />
+      <div
+        css={{
+          zIndex: 3,
+          position: "relative",
+          fontSize: "1em",
+          fontWeight: "bold",
+          color: "black",
+          textShadow:
+            "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"
+        }}
+      >
+        <Counter
+          handleDecrease={handleDecrease}
+          handleIncrease={handleIncrease}
+          quantity={quantity}
+        />
+      </div>
     </div>
   );
 }

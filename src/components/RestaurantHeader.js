@@ -16,7 +16,7 @@ function RestaurantHeader() {
     color: "#fff",
     justifyContent: "space-between",
     alignItems: "center",
-    background: "rgba(245, 230, 83, 1)",
+    background: "rgb(255,210,0)",
     padding: 20,
     width: "100%",
     fontWeight: "bold",

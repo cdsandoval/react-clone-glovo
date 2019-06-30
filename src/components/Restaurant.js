@@ -17,6 +17,8 @@ function Restaurant({ name, ratingValue, id }) {
     backgroundColor: "white",
     display: "flex",
     justifyContent: "center",
+    alignItems: "center",
+    alignContent: "center",
     width: "40vh",
     height: "140px",
     boxSizing: "border - box",
@@ -38,7 +40,7 @@ function Restaurant({ name, ratingValue, id }) {
   const spanCss = {
     zIndex: 3,
     position: "relative",
-    fontSize: "1em",
+    fontSize: "1.2em",
     fontWeight: "bold",
     color: "white",
     textShadow: "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"
@@ -55,9 +57,9 @@ function Restaurant({ name, ratingValue, id }) {
 
         <span css={spanCss}>{name}</span>
 
-        <span css={spanCss}>
+        {/* <span css={spanCss}>
           <Rating ratingNumber={ratingValue} />
-        </span>
+        </span> */}
       </Link>
     </div>
   );

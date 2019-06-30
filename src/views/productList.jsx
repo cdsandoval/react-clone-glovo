@@ -27,6 +27,13 @@ function ProductList() {
         <Link to="/order">
           <button
             css={{
+              zIndex: 3,
+              position: "relative",
+              fontSize: "1em",
+              fontWeight: "bold",
+              color: "black",
+              textShadow:
+                "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black",
               position: "fixed",
               bottom: "15px",
               left: "35%",

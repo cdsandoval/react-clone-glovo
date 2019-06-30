@@ -8,7 +8,7 @@ function Amount() {
   return (
     <div
       css={{
-        marginBottom: "1.5em"
+        marginBottom: "1em"
       }}
     >
       <Card>Total amount: S/. {amount}</Card>
