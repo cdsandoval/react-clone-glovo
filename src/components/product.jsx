@@ -86,12 +86,6 @@ function Product({ cart }) {
           paddingTop: "10px"
         }}
       >
-        {/* <img
-          css={imgCss}
-          src="http://lorempixel.com/500/250/food/?random"
-          alt="Random Food"
-        /> */}
-
         <span css={spanCss}>{cart.name}</span>
         <span css={spanCss}>S/. {cart.price}</span>
         <span css={spanCss}>{cart.description}</span>

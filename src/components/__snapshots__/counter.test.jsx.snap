@@ -2,14 +2,9 @@
 
 exports[`Counter component 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  all: revert;
-}
-
-<div>
+  <div>
     <button
       aria-label="Increase Quantity"
-      class="emotion-0"
     >
       <i
         aria-hidden="true"

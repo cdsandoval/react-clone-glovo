@@ -5,11 +5,7 @@ import { Icon } from "semantic-ui-react";
 function Counter({ handleDecrease, handleIncrease, quantity }) {
   return (
     <div>
-      <button
-        aria-label="Increase Quantity"
-        onClick={handleDecrease}
-        css={{ all: "revert" }}
-      >
+      <button aria-label="Increase Quantity" onClick={handleDecrease}>
         <Icon name="minus square" size="big" />
       </button>
       <span>{quantity}</span>
