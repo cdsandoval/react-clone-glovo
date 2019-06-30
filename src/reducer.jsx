@@ -94,7 +94,10 @@ function menuReducer(state = initialState.menu, action) {
 function orderReducer(state = initialState.order, action) {
   switch (action.type) {
     case "ORDER": {
-      return action.payload;
+      return {
+        ...state,
+        [action.payload.id]: action.payload
+      };
     }
     default: {
       return state;

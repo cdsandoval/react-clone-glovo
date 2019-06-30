@@ -2,6 +2,7 @@
 import React from "react";
 import { jsx } from "@emotion/core";
 import History from "../components/History";
+import { useOrder } from "../selector";
 
 const history_list = {
   1: {
@@ -48,15 +49,11 @@ const body = {
 };
 
 function HistoryList() {
+  const order = useOrder();
   return (
     <section css={body}>
-      {Object.values(history_list).map(value => {
-        return (
-          <History
-            restaurantName={value.restaurant_name}
-            totalPaid={value.total_price}
-          />
-        );
+      {order.map(value => {
+        return <History restaurantName={value.name} totalPaid={value.total} />;
       })}
     </section>
   );

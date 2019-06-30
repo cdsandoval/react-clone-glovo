@@ -46,7 +46,24 @@ function useRestId() {
   }, shallowEqual);
 }
 
+function useOrder() {
+  return useSelector(state => {
+    let name = [];
+
+    Object.values(state.order).map(value => {
+      return Object.values(state.restaurants).forEach(val => {
+        if (value.restaurant_id === val.id) {
+          name.push({ name: val.name, total: value.total_price });
+        }
+      });
+    });
+
+    return name;
+  }, shallowEqual);
+}
+
 export {
+  useOrder,
   useRestId,
   useProductfromCart,
   useUser,
