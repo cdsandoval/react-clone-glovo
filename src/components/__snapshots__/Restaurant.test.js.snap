@@ -55,7 +55,7 @@ exports[`Login Form on Submit 1`] = `
     class="emotion-5"
   >
     <a
-      href="/product-list"
+      href="/"
     >
       <img
         alt="Random Food"

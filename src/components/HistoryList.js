@@ -60,14 +60,3 @@ function HistoryList() {
 }
 
 export default HistoryList;
-
-// create_table "orders", force: :cascade do |t|
-//     t.bigint "user_id"
-//     t.integer "total_price"
-//     t.bigint "restaurant_id"
-//     t.datetime "created_at", null: false
-//     t.datetime "updated_at", null: false
-//     t.boolean "complete", default: false
-//     t.index ["restaurant_id"], name: "index_orders_on_restaurant_id"
-//     t.index ["user_id"], name: "index_orders_on_user_id"
-//   end

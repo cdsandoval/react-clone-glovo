@@ -69,11 +69,20 @@ function userReducer(state = initialState.user, action = {}) {
   }
 }
 
-function restaurantsReducer(state = initialState.restaurants, action) {
+function restaurantsReducer(state = initialState.restaurants, action = {}) {
   switch (action.type) {
     case "LIST_RESTAURANTS": {
       return action.payload;
     }
+
+    case "SELECT_RESTAURANT": {
+      console.log(state);
+      return {
+        ...state,
+        restaurant: action.payload
+      };
+    }
+
     default: {
       return state;
     }

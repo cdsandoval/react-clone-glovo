@@ -62,6 +62,18 @@ function useOrder() {
   }, shallowEqual);
 }
 
+function useLocationRestaurant(id) {
+  return useSelector(state => {
+    const address = [];
+    Object.values(state.restaurants).forEach(obj => {
+      if (obj.id === id) {
+        address.push({ address: obj.address });
+      }
+    });
+    return address;
+  }, shallowEqual);
+}
+
 export {
   useOrder,
   useRestId,
@@ -70,5 +82,6 @@ export {
   useRestaurants,
   useSelectorCart,
   useSelectorTotal,
-  useMenu
+  useMenu,
+  useLocationRestaurant
 };
