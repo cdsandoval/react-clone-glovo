@@ -3,11 +3,14 @@ import { jsx } from "@emotion/core";
 import { Button } from "../components/ui";
 import { usePostOrder } from "../action-hook";
 import { useRestId, useSelectorCart } from "../selector";
+import { navigate } from "@reach/router";
+import { useReset } from "../action-hook";
 
 function ConfirmOrder() {
   const order = usePostOrder();
   const restid = useRestId();
   const cart = useSelectorCart();
+  const reset = useReset();
 
   function sendOrder() {
     const data = {
@@ -22,6 +25,8 @@ function ConfirmOrder() {
       }
     };
     order(data);
+    reset();
+    navigate("/");
   }
   return (
     <div>
