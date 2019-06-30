@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { jsx } from "@emotion/core";
 import { Icon } from "semantic-ui-react";
-import { Link } from "@reach/router";
+import { Link, navigate } from "@reach/router";
 import { useReset } from "../action-hook";
 
 import { Dialog } from "@reach/dialog";
@@ -44,6 +44,7 @@ function HeaderBar({ routePath, titleBar }) {
   function handleYes() {
     setShowDialog(false);
     reset();
+    navigate("/");
   }
 
   return (

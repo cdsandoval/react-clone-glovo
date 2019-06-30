@@ -29,7 +29,7 @@ function History({ restaurantName, totalPaid }) {
   };
 
   const spanCss = {
-    zIndex: 3,
+    zIndex: 2,
     fontSize: "1.5em",
     color: "white",
     textShadow: "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"

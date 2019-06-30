@@ -2,6 +2,7 @@
 import React from "react";
 import { jsx } from "@emotion/core";
 import History from "../components/History";
+import { useOrder } from "../selector";
 
 const history_list = {
   1: {
@@ -48,29 +49,14 @@ const body = {
 };
 
 function HistoryList() {
+  const order = useOrder();
   return (
     <section css={body}>
-      {Object.values(history_list).map(value => {
-        return (
-          <History
-            restaurantName={value.restaurant_name}
-            totalPaid={value.total_price}
-          />
-        );
+      {order.map(value => {
+        return <History restaurantName={value.name} totalPaid={value.total} />;
       })}
     </section>
   );
 }
 
 export default HistoryList;
-
-// create_table "orders", force: :cascade do |t|
-//     t.bigint "user_id"
-//     t.integer "total_price"
-//     t.bigint "restaurant_id"
-//     t.datetime "created_at", null: false
-//     t.datetime "updated_at", null: false
-//     t.boolean "complete", default: false
-//     t.index ["restaurant_id"], name: "index_orders_on_restaurant_id"
-//     t.index ["user_id"], name: "index_orders_on_user_id"
-//   end

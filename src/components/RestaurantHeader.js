@@ -21,7 +21,7 @@ function RestaurantHeader() {
     width: "100%",
     fontWeight: "bold",
     marginBottom: "30px",
-    zIndex: 4
+    zIndex: 2
   };
 
   const h1 = {
@@ -30,7 +30,7 @@ function RestaurantHeader() {
 
   return (
     <div css={headerCss}>
-      <Link to="/login" style={{ color: "white" }}>
+      <Link to="/record" style={{ color: "white" }}>
         <Icon name="user circle outline" size="large" />
       </Link>
       <h1 css={h1}>Catalog</h1>

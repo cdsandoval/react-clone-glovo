@@ -1,6 +1,7 @@
 const API_LOGIN_URL = "http://localhost:3000/api/login";
 const API_LOGOUT_URL = "http://localhost:3000/api/logout";
 const API_RESTAURANT_URL = "http://localhost:3000/api/restaurants";
+const API_ORDER_URL = "http://localhost:3000/api/orders";
 
 function increaseQuantity(id) {
   return {
@@ -8,6 +9,13 @@ function increaseQuantity(id) {
     payload: {
       id
     }
+  };
+}
+
+function addRestId(id) {
+  return {
+    type: "ADD_REST_ID",
+    payload: id
   };
 }
 
@@ -103,6 +111,22 @@ function listMenu(id) {
   };
 }
 
+function postOrder(order) {
+  return async dispatch => {
+    const response = await fetch(API_ORDER_URL, {
+      method: "POST",
+      credentials: "include",
+      body: JSON.stringify(order),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+    if (!response.ok) return { type: "DEFAULT" };
+    const payload = await response.json();
+    dispatch({ type: "ORDER", payload });
+  };
+}
+
 export {
   login,
   logout,
@@ -112,5 +136,7 @@ export {
   addCart,
   removeCart,
   listRestaurants,
-  listMenu
+  listMenu,
+  postOrder,
+  addRestId
 };

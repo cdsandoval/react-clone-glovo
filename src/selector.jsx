@@ -40,31 +40,48 @@ function useUser() {
   }, shallowEqual);
 }
 
-function useLoading() {
+function useRestId() {
   return useSelector(state => {
-    if (state.user.loading) {
-      return state.user.loading;
-    }
-    return null;
+    return state.restid;
   }, shallowEqual);
 }
 
-function useError() {
+function useOrder() {
   return useSelector(state => {
-    if (state.user.error) {
-      return state.user.error;
-    }
-    return null;
+    let name = [];
+
+    Object.values(state.order).map(value => {
+      return Object.values(state.restaurants).forEach(val => {
+        if (value.restaurant_id === val.id) {
+          name.push({ name: val.name, total: value.total_price });
+        }
+      });
+    });
+
+    return name;
+  }, shallowEqual);
+}
+
+function useLocationRestaurant(id) {
+  return useSelector(state => {
+    const address = [];
+    Object.values(state.restaurants).forEach(obj => {
+      if (obj.id === id) {
+        address.push({ address: obj.address });
+      }
+    });
+    return address;
   }, shallowEqual);
 }
 
 export {
+  useOrder,
+  useRestId,
   useProductfromCart,
   useUser,
-  useLoading,
-  useError,
   useRestaurants,
   useSelectorCart,
   useSelectorTotal,
-  useMenu
+  useMenu,
+  useLocationRestaurant
 };

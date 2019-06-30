@@ -3,13 +3,15 @@ import React from "react";
 import { jsx } from "@emotion/core";
 import Rating from "./Rating";
 import { Link } from "@reach/router";
-import { useListMenu } from "../action-hook";
+import { useListMenu, useRestId } from "../action-hook";
 
 function Restaurant({ name, ratingValue, id }) {
   const menu_list = useListMenu();
+  const restId = useRestId();
 
   function menuList() {
     menu_list(id);
+    restId(id);
   }
 
   const container = {
