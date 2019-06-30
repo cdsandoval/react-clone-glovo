@@ -16,17 +16,15 @@ function Restaurant({ name, ratingValue, id }) {
     position: "relative",
     backgroundColor: "white",
     display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-between",
-    alignItems: "center",
+    justifyContent: "center",
     width: "40vh",
-    height: "120px",
+    height: "140px",
     boxSizing: "border - box",
     padding: 12,
     borderRadius: 8,
     boxShadow: "0px 5px 9px rgba(0, 0, 0, 0.2)",
     overflow: "hidden",
-    marginBottom: "25px"
+    margin: "20px 0"
   };
 
   const imgCss = {
@@ -40,7 +38,7 @@ function Restaurant({ name, ratingValue, id }) {
   const spanCss = {
     zIndex: 3,
     position: "relative",
-    fontSize: "1.5em",
+    fontSize: "1em",
     fontWeight: "bold",
     color: "white",
     textShadow: "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"

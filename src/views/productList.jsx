@@ -11,8 +11,14 @@ function ProductList() {
   const user = useUser();
   if (!user.name) return <Redirect to="/login" noThrow />;
 
+  const body = {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center"
+  };
+
   return (
-    <>
+    <div css={body}>
       <HeaderBar routePath="/" titleBar="Product List" />
       <section>
         {use.map(value => {
@@ -38,7 +44,7 @@ function ProductList() {
           </button>
         </Link>
       </section>
-    </>
+    </div>
   );
 }
 
