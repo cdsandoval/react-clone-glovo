@@ -26,7 +26,7 @@ function ConfirmOrder() {
     };
     order(data);
     reset();
-    navigate("/");
+    navigate(`/location/${restid}`);
   }
   return (
     <div>

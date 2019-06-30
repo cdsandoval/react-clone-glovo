@@ -48,21 +48,6 @@ function Restaurant({ name, ratingValue, id }) {
     textShadow: "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"
   };
 
-  const imgCss = {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    zIndex: 1,
-    filter: "blur(2px)"
-  };
-
-  const spanCss = {
-    zIndex: 3,
-    fontSize: "1.5em",
-    color: "white",
-    textShadow: "-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black"
-  };
-
   return (
     <div css={container}>
       <Link to="/product-list" onClick={menuList}>

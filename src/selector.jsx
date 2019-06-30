@@ -62,14 +62,17 @@ function useOrder() {
   }, shallowEqual);
 }
 
-// function useLocationRestaurant(id) {
-// //   return useSelector( state => {
-// //     console.log(state);
-// //     Object.values(state.restaurants).find(obj => obj.id === id); return obj.address)
-// //   }
-// //   return
-// //   );
-// // }
+function useLocationRestaurant(id) {
+  return useSelector(state => {
+    const address = [];
+    Object.values(state.restaurants).forEach(obj => {
+      if (obj.id === id) {
+        address.push({ address: obj.address });
+      }
+    });
+    return address;
+  }, shallowEqual);
+}
 
 export {
   useOrder,
@@ -79,6 +82,6 @@ export {
   useRestaurants,
   useSelectorCart,
   useSelectorTotal,
-  useMenu
-  // useLocationLocation
+  useMenu,
+  useLocationRestaurant
 };
