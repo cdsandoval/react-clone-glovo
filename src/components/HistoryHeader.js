@@ -3,8 +3,11 @@ import React from "react";
 import { jsx } from "@emotion/core";
 import { Icon } from "semantic-ui-react";
 import { Link } from "@reach/router";
+import { useLogout } from "../action-hook";
 
 function HistoryHeader() {
+  const logout = useLogout();
+
   const headerCss = {
     display: "flex",
     flexDirection: "row",
@@ -30,7 +33,9 @@ function HistoryHeader() {
         <Icon name="arrow alternate circle left outline" size="large" />
       </Link>
       <h1 css={h1}>Record</h1>
-      <Icon name="sign out" size="large" />
+      <Link to="/login" onClick={logout} css={{ color: "white" }}>
+        <Icon name="sign out" size="large" />
+      </Link>
     </div>
   );
 }
