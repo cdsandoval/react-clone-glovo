@@ -105,9 +105,23 @@ function listMenu(id) {
       }
     });
     const payload = await response.json();
-    console.log(payload);
     if (!response.ok) dispatch({ type: "DEFAULT" });
     dispatch({ type: "LIST_MENU", payload });
+  };
+}
+
+function fetchOrder() {
+  return async dispatch => {
+    const response = await fetch(API_ORDER_URL, {
+      credentials: "include",
+      header: {
+        "Content-Type": "aplication/json"
+      }
+    });
+    const payload = await response.json();
+    console.log(payload);
+    if (!response.ok) dispatch({ type: "DEFAULT" });
+    dispatch({ type: "FETCH_ORDER", payload });
   };
 }
 
@@ -138,5 +152,6 @@ export {
   listRestaurants,
   listMenu,
   postOrder,
-  addRestId
+  addRestId,
+  fetchOrder
 };

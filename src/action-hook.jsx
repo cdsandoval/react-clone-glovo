@@ -11,8 +11,14 @@ import {
   listRestaurants,
   listMenu,
   postOrder,
-  addRestId
+  addRestId,
+  fetchOrder
 } from "./action";
+
+export function useFetchOrder() {
+  const dispatch = useDispatch();
+  return React.useCallback(() => dispatch(fetchOrder()), [dispatch]);
+}
 
 export function useRestId() {
   const dispatch = useDispatch();

@@ -76,7 +76,6 @@ function restaurantsReducer(state = initialState.restaurants, action = {}) {
     }
 
     case "SELECT_RESTAURANT": {
-      console.log(state);
       return {
         ...state,
         restaurant: action.payload
@@ -107,6 +106,9 @@ function orderReducer(state = initialState.order, action) {
         ...state,
         [action.payload.id]: action.payload
       };
+    }
+    case "FETCH_ORDER": {
+      return action.payload;
     }
     default: {
       return state;
